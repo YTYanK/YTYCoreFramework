@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import <YTYCoreFramework/YTYCoreFramework.h>
 @interface ViewController ()
 
 @end
@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"测试-》%.2f", self.view.maxX);
     // Do any additional setup after loading the view.
 }
 
