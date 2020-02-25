@@ -57,6 +57,11 @@ typedef id (^YTYMutualVlueBlock)(id value);
 
 //???:---------------获取各种高度、宽度
 /**
+   
+ */
+#define SCREEN_SCALE ([UIScreeen mainScreen].scale)
+
+/**
  *  获取手机屏幕的高度
  */
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
@@ -90,6 +95,20 @@ typedef id (^YTYMutualVlueBlock)(id value);
  */
 #define SCREEN_STATUS_BAR  [[UIApplication sharedApplication] statusBarFrame]
 
+/**
+ * 宽/高比 - MIN
+ */
+#define SCREEN_PORTRAIT_WIDTH (MIN(SCREEN_WIDTH,SCREEN_HEIGHT))
+/**
+ * 宽/高比 - MAX
+ */
+#define SCREEN_PORTRAIT_HEIGHT (MAX(SCREEN_WIDTH,SCREEN_HEIGHT))
+ 
+#define YTY_DP(size, _base_screen_width) ((CGFloat)(size) / (_base_screen_width) * SCREEN_PORTRAIT_WIDTH)
+
+#define YTY_DP_320(size)     YTY_DP(size, 320.0)
+#define YTY_DP_375(size)     YTY_DP(size, 375.0)
+#define YTY_DP_414(size)     YTY_DP(size, 414.0)
 
 //???:---------------颜色宏
 /**
