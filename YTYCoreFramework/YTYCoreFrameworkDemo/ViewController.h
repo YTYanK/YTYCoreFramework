@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <YTYCoreFramework/YTYCoreFramework.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : YTYBaseViewController
 
 
 @end

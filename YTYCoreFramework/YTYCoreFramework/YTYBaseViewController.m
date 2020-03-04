@@ -159,7 +159,8 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
         if (self.isCustomTable == NO) {
             [self.view addSubview: tableView];
             [self.view bringSubviewToFront:tableView];
-            tableView.frame = CGRectMake(self.view.left, SCREEN_NAV_BAR, self.view.width, self.view.height - SCREEN_NAV_BAR);
+//            tableView.frame = CGRectMake(self.view.left, SCREEN_NAV_BAR, self.view.width, self.view.height - SCREEN_NAV_BAR);
+             tableView.frame = CGRectMake(self.view.frame.origin.x, SCREEN_NAV_BAR, self.view.frame.size.width, self.view.frame.size.height - SCREEN_NAV_BAR);
         }
     }
 }
