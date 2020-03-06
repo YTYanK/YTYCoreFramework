@@ -7,7 +7,8 @@
 //
 
 #import "YTYBaseViewController.h"
-#import <UIView+RGSize.h>
+//#import <UIView+RGSize.h> //--没有用。。
+#import "UIView+RGSize.h"
 @interface YTYBaseViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
@@ -51,7 +52,7 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"查看，，%@", [UINavigationBar appearance]);
+    NSLog(@"查看%@", [UINavigationBar appearance]);
 }
 
 

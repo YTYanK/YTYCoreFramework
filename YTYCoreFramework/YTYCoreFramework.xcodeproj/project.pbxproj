@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,20 +11,20 @@
 		3C484737240FADC800214589 /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C484735240FADC800214589 /* testVC.m */; };
 		3CB43B2C23FE78F200D50EE0 /* YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */; };
 		3CB43B3123FE78F200D50EE0 /* YTYCoreFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B3023FE78F200D50EE0 /* YTYCoreFrameworkTests.m */; };
-		3CB43B3323FE78F200D50EE0 /* YTYCoreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B2523FE78F200D50EE0 /* YTYCoreFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CB43B4923FE7A1000D50EE0 /* YTYBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3C23FE7A0F00D50EE0 /* YTYBaseNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CB43B4A23FE7A1000D50EE0 /* YTYBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3D23FE7A0F00D50EE0 /* YTYBaseTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB43B3323FE78F200D50EE0 /* YTYCoreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B2523FE78F200D50EE0 /* YTYCoreFramework.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB43B4923FE7A1000D50EE0 /* YTYBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3C23FE7A0F00D50EE0 /* YTYBaseNavigationController.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB43B4A23FE7A1000D50EE0 /* YTYBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3D23FE7A0F00D50EE0 /* YTYBaseTableViewCell.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B4B23FE7A1000D50EE0 /* YTYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B3E23FE7A0F00D50EE0 /* YTYBaseViewController.m */; };
-		3CB43B4C23FE7A1000D50EE0 /* UIViewController+BackButtonHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3F23FE7A0F00D50EE0 /* UIViewController+BackButtonHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB43B4C23FE7A1000D50EE0 /* UIViewController+BackButtonHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3F23FE7A0F00D50EE0 /* UIViewController+BackButtonHandler.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B4D23FE7A1000D50EE0 /* YTYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4023FE7A0F00D50EE0 /* YTYBaseNavigationController.m */; };
-		3CB43B4E23FE7A1000D50EE0 /* YTYApiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4123FE7A0F00D50EE0 /* YTYApiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB43B4E23FE7A1000D50EE0 /* YTYApiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4123FE7A0F00D50EE0 /* YTYApiBase.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B4F23FE7A1000D50EE0 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4223FE7A0F00D50EE0 /* UIViewController+BackButtonHandler.m */; };
 		3CB43B5023FE7A1000D50EE0 /* UIView+RGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4323FE7A0F00D50EE0 /* UIView+RGSize.m */; };
 		3CB43B5123FE7A1000D50EE0 /* YTYBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4423FE7A0F00D50EE0 /* YTYBaseTableViewCell.m */; };
 		3CB43B5223FE7A1000D50EE0 /* YTYApiBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4523FE7A1000D50EE0 /* YTYApiBase.m */; };
-		3CB43B5323FE7A1000D50EE0 /* YTYBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4623FE7A1000D50EE0 /* YTYBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CB43B5423FE7A1000D50EE0 /* YTYConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4723FE7A1000D50EE0 /* YTYConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CB43B5523FE7A1000D50EE0 /* UIView+RGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4823FE7A1000D50EE0 /* UIView+RGSize.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB43B5323FE7A1000D50EE0 /* YTYBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4623FE7A1000D50EE0 /* YTYBaseViewController.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB43B5423FE7A1000D50EE0 /* YTYConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4723FE7A1000D50EE0 /* YTYConfigure.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB43B5523FE7A1000D50EE0 /* UIView+RGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4823FE7A1000D50EE0 /* UIView+RGSize.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B9F23FE8BCE00D50EE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B9E23FE8BCE00D50EE0 /* AppDelegate.m */; };
 		3CB43BA223FE8BCE00D50EE0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43BA123FE8BCE00D50EE0 /* SceneDelegate.m */; };
 		3CB43BA523FE8BCE00D50EE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43BA423FE8BCE00D50EE0 /* ViewController.m */; };
@@ -35,6 +35,9 @@
 		3CB43BBA23FE8BCF00D50EE0 /* YTYCoreFrameworkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43BB923FE8BCF00D50EE0 /* YTYCoreFrameworkDemoTests.m */; };
 		3CB43BC523FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43BC423FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests.m */; };
 		3CB43BD123FE8D0300D50EE0 /* YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */; };
+		3CC8CB5F2412557A00EDEE71 /* YTYRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC8CB5D2412557A00EDEE71 /* YTYRequest.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		3CC8CB602412557A00EDEE71 /* YTYRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8CB5E2412557A00EDEE71 /* YTYRequest.m */; };
+		B46AF0BBD2D1B2E1A4B79FB6 /* Pods_YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3CD67DD5150BDFD83D2BCC /* Pods_YTYCoreFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3483B326386D821C942D2863 /* Pods-YTYCoreFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFramework.debug.xcconfig"; path = "Target Support Files/Pods-YTYCoreFramework/Pods-YTYCoreFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		3C484732240FADC800214589 /* testVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testVC.h; sourceTree = "<group>"; };
 		3C484733240FADC800214589 /* testVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testVC2.m; sourceTree = "<group>"; };
 		3C484734240FADC800214589 /* testVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testVC2.h; sourceTree = "<group>"; };
@@ -103,6 +107,10 @@
 		3CB43BC023FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YTYCoreFrameworkDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB43BC423FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTYCoreFrameworkDemoUITests.m; sourceTree = "<group>"; };
 		3CB43BC623FE8BCF00D50EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC8CB5D2412557A00EDEE71 /* YTYRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTYRequest.h; sourceTree = "<group>"; };
+		3CC8CB5E2412557A00EDEE71 /* YTYRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTYRequest.m; sourceTree = "<group>"; };
+		9D3CD67DD5150BDFD83D2BCC /* Pods_YTYCoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTYCoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E58146BD9F78E1A3F2AE7E4C /* Pods-YTYCoreFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFramework.release.xcconfig"; path = "Target Support Files/Pods-YTYCoreFramework/Pods-YTYCoreFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B46AF0BBD2D1B2E1A4B79FB6 /* Pods_YTYCoreFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +155,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01F11FDB0195DD5D909E00B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3483B326386D821C942D2863 /* Pods-YTYCoreFramework.debug.xcconfig */,
+				E58146BD9F78E1A3F2AE7E4C /* Pods-YTYCoreFramework.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3CB43B1823FE78F200D50EE0 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +174,7 @@
 				3CB43BC323FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests */,
 				3CB43B2323FE78F200D50EE0 /* Products */,
 				3CB43BD023FE8D0300D50EE0 /* Frameworks */,
+				01F11FDB0195DD5D909E00B6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,6 +208,8 @@
 				3CB43B4723FE7A1000D50EE0 /* YTYConfigure.h */,
 				3CB43B2523FE78F200D50EE0 /* YTYCoreFramework.h */,
 				3CB43B2623FE78F200D50EE0 /* Info.plist */,
+				3CC8CB5D2412557A00EDEE71 /* YTYRequest.h */,
+				3CC8CB5E2412557A00EDEE71 /* YTYRequest.m */,
 			);
 			path = YTYCoreFramework;
 			sourceTree = "<group>";
@@ -245,6 +266,7 @@
 		3CB43BD023FE8D0300D50EE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D3CD67DD5150BDFD83D2BCC /* Pods_YTYCoreFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -256,6 +278,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CC8CB5F2412557A00EDEE71 /* YTYRequest.h in Headers */,
 				3CB43B4923FE7A1000D50EE0 /* YTYBaseNavigationController.h in Headers */,
 				3CB43B5323FE7A1000D50EE0 /* YTYBaseViewController.h in Headers */,
 				3CB43B5423FE7A1000D50EE0 /* YTYConfigure.h in Headers */,
@@ -274,6 +297,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CB43B3623FE78F200D50EE0 /* Build configuration list for PBXNativeTarget "YTYCoreFramework" */;
 			buildPhases = (
+				EBB8F1E3A890621F4AA77851 /* [CP] Check Pods Manifest.lock */,
 				3CB43B1D23FE78F200D50EE0 /* Headers */,
 				3CB43B1E23FE78F200D50EE0 /* Sources */,
 				3CB43B1F23FE78F200D50EE0 /* Frameworks */,
@@ -450,6 +474,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EBB8F1E3A890621F4AA77851 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YTYCoreFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3CB43B1E23FE78F200D50EE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -461,6 +510,7 @@
 				3CB43B5023FE7A1000D50EE0 /* UIView+RGSize.m in Sources */,
 				3CB43B5223FE7A1000D50EE0 /* YTYApiBase.m in Sources */,
 				3CB43B4D23FE7A1000D50EE0 /* YTYBaseNavigationController.m in Sources */,
+				3CC8CB602412557A00EDEE71 /* YTYRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +709,7 @@
 		};
 		3CB43B3723FE78F200D50EE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3483B326386D821C942D2863 /* Pods-YTYCoreFramework.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -685,6 +736,7 @@
 		};
 		3CB43B3823FE78F200D50EE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E58146BD9F78E1A3F2AE7E4C /* Pods-YTYCoreFramework.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

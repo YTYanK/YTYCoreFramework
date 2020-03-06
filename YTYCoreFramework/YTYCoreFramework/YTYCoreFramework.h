@@ -18,10 +18,10 @@ FOUNDATION_EXPORT const unsigned char YTYCoreFrameworkVersionString[];
 
 // 公开分类：
 #import "UIView+RGSize.h"
-
 // 公开的类 ，需要把文件  Headesr - 》public 下
 #import "YTYConfigure.h"
 #import "YTYApiBase.h"
+#import "YTYRequest.h"
 #import "YTYBaseViewController.h"
 #import "YTYBaseNavigationController.h"
 #import "UIViewController+BackButtonHandler.h"

@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 设置 标题 样式
 - (void)navBarTitleTextAttributes:(NSDictionary<NSAttributedStringKey, id> *)attributes;
+
+/// 隐藏下划线
+- (void)hideNavigationUnderline;
 @end
 
 NS_ASSUME_NONNULL_END

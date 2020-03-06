@@ -100,6 +100,11 @@
     [self.navigationBar setTitleTextAttributes:attributes];
 }
 
+/// 隐藏下划线
+- (void)hideNavigationUnderline {
+   [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+   [self.navigationBar setShadowImage:[UIImage new]];
+}
 
 
 //  push 方法
