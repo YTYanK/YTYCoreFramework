@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C481504242B534E00882209 /* MBProgressHUD+MJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C481501242B534E00882209 /* MBProgressHUD+MJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C481505242B534E00882209 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C481502242B534E00882209 /* MBProgressHUD+MJ.m */; };
+		3C481506242B534E00882209 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C481503242B534E00882209 /* MBProgressHUD.bundle */; };
 		3C484736240FADC800214589 /* testVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C484733240FADC800214589 /* testVC2.m */; };
 		3C484737240FADC800214589 /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C484735240FADC800214589 /* testVC.m */; };
 		3CB43B2C23FE78F200D50EE0 /* YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */; };
@@ -66,6 +69,9 @@
 
 /* Begin PBXFileReference section */
 		3483B326386D821C942D2863 /* Pods-YTYCoreFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFramework.debug.xcconfig"; path = "Target Support Files/Pods-YTYCoreFramework/Pods-YTYCoreFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		3C481501242B534E00882209 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		3C481502242B534E00882209 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		3C481503242B534E00882209 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		3C484732240FADC800214589 /* testVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testVC.h; sourceTree = "<group>"; };
 		3C484733240FADC800214589 /* testVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testVC2.m; sourceTree = "<group>"; };
 		3C484734240FADC800214589 /* testVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testVC2.h; sourceTree = "<group>"; };
@@ -193,6 +199,9 @@
 		3CB43B2423FE78F200D50EE0 /* YTYCoreFramework */ = {
 			isa = PBXGroup;
 			children = (
+				3C481503242B534E00882209 /* MBProgressHUD.bundle */,
+				3C481501242B534E00882209 /* MBProgressHUD+MJ.h */,
+				3C481502242B534E00882209 /* MBProgressHUD+MJ.m */,
 				3CB43B4823FE7A1000D50EE0 /* UIView+RGSize.h */,
 				3CB43B4323FE7A0F00D50EE0 /* UIView+RGSize.m */,
 				3CB43B3F23FE7A0F00D50EE0 /* UIViewController+BackButtonHandler.h */,
@@ -285,6 +294,7 @@
 				3CB43B4C23FE7A1000D50EE0 /* UIViewController+BackButtonHandler.h in Headers */,
 				3CB43B4A23FE7A1000D50EE0 /* YTYBaseTableViewCell.h in Headers */,
 				3CB43B5523FE7A1000D50EE0 /* UIView+RGSize.h in Headers */,
+				3C481504242B534E00882209 /* MBProgressHUD+MJ.h in Headers */,
 				3CB43B4E23FE7A1000D50EE0 /* YTYApiBase.h in Headers */,
 				3CB43B3323FE78F200D50EE0 /* YTYCoreFramework.h in Headers */,
 			);
@@ -438,6 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C481506242B534E00882209 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +519,7 @@
 				3CB43B4F23FE7A1000D50EE0 /* UIViewController+BackButtonHandler.m in Sources */,
 				3CB43B5123FE7A1000D50EE0 /* YTYBaseTableViewCell.m in Sources */,
 				3CB43B5023FE7A1000D50EE0 /* UIView+RGSize.m in Sources */,
+				3C481505242B534E00882209 /* MBProgressHUD+MJ.m in Sources */,
 				3CB43B5223FE7A1000D50EE0 /* YTYApiBase.m in Sources */,
 				3CB43B4D23FE7A1000D50EE0 /* YTYBaseNavigationController.m in Sources */,
 				3CC8CB602412557A00EDEE71 /* YTYRequest.m in Sources */,
@@ -727,6 +739,8 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LIBTOOLFLAGS = "-ObjC -all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = YTYanK.YTYCoreFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -754,6 +768,8 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = NO;
 				MACH_O_TYPE = staticlib;
+				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LIBTOOLFLAGS = "-ObjC -all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = YTYanK.YTYCoreFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

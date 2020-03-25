@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "YTYConfigure.h"
 #import "YTYBaseTableViewCell.h"
+#import <MJRefresh/MJRefresh.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -65,6 +67,10 @@ typedef void(^BaseUpdateData)(id vc);
  */
 @property (strong, nonatomic) CellAdditionalBlock  additionalBlock;
 
+
+
+@property (strong, nonatomic) MJRefreshNormalHeader * header;
+@property (strong, nonatomic) MJRefreshBackNormalFooter * footer;
 
 //- (init)initNavigaionAddVC:(UIViewController *)vc;
 ////- (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil

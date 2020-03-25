@@ -14,36 +14,6 @@
 */
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- 
-   这里可以导数据模型
- */
-
-typedef NSString *AUString NS_STRING_ENUM;
-
-
-/**  网络请求方式 */
-typedef NS_ENUM(NSInteger, NetMethod){
-    NetMethodGET  =  -1,
-    NetMethodPOST =  1,
-};
-
-/** 服务类型  */
-typedef NS_ENUM(NSUInteger, YTYServerType) {
-    Development = 0, // 开发
-    Test = 1,   // 测试
-    Release = 2 // 正式
-};
-
-/** 获取到数据的情况 */
-typedef NS_ENUM(NSInteger, NetObtainDataStatus) {
-    NetObtainDataStatusUnknownAlsoFail      = -2,  //  -失败
-    NetObtainDataStatusFail                 = -1,  // 失败
-    NetObtainDataStatusError                = 0,   // error
-    NetObtainDataStatusSuccess              = 1,   // 成功
-    NetObtainDataStatusSuccessAlsoNotData   = 2,   // 成功 -无数据
-};
-
 
 //// Test
 //#define IPHEAD_TEST @""

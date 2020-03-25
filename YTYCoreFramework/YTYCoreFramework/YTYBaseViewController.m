@@ -163,6 +163,12 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 //            tableView.frame = CGRectMake(self.view.left, SCREEN_NAV_BAR, self.view.width, self.view.height - SCREEN_NAV_BAR);
              tableView.frame = CGRectMake(self.view.frame.origin.x, SCREEN_NAV_BAR, self.view.frame.size.width, self.view.frame.size.height - SCREEN_NAV_BAR);
         }
+        
+        self.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(tableRefreshData)];
+        self.footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(tableLoadData)];
+           _baseTableView.mj_header = self.header;
+           _baseTableView.mj_footer = self.footer;
+        
     }
 }
 
@@ -177,7 +183,6 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 120;
 }
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     self.baseCell = [YTYBaseTableViewCell initCellWithCellView:tableView reuseIdentifier:cellIdentifier];
     self.baseCell.nestingTableView = self.baseTableView;
@@ -188,8 +193,12 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
     return self.baseCell;
 }
 
-
-
+#pragma mark - TableView Refresh / Load
+// 刷新
+- (void)tableRefreshData {
+}
+- (void)tableLoadData {
+}
 /*
 #pragma mark - Navigation
 
