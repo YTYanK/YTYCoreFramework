@@ -22,7 +22,7 @@
 + (MBProgressHUD *)showMessage:(NSString *)message;
 
 + (void)hideHUDForView:(UIView *)view;
-+ (void)hideHUDForDis:(CGFloat)dis;
+//+ (void)hideHUDForDis:(CGFloat)dis;
 + (void)hideHUD;
 
 

@@ -79,6 +79,7 @@
     [self hideHUDForView:view animated:YES];
 }
 
+
 + (void)hideHUD {
     [self hideHUDForView:nil];
 }
