@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C481504242B534E00882209 /* MBProgressHUD+MJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C481501242B534E00882209 /* MBProgressHUD+MJ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C481504242B534E00882209 /* MBProgressHUD+MJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C481501242B534E00882209 /* MBProgressHUD+MJ.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3C481505242B534E00882209 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C481502242B534E00882209 /* MBProgressHUD+MJ.m */; };
 		3C481506242B534E00882209 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C481503242B534E00882209 /* MBProgressHUD.bundle */; };
 		3C484736240FADC800214589 /* testVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C484733240FADC800214589 /* testVC2.m */; };
