@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AppKit/AppKit.h>
+#import <UIKit/UIKit.h>
 //! Project version number for YTYCoreFramework.
 FOUNDATION_EXPORT double YTYCoreFrameworkVersionNumber;
 
