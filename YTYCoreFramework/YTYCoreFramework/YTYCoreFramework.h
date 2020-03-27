@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <AppKit/AppKit.h>
 //! Project version number for YTYCoreFramework.
 FOUNDATION_EXPORT double YTYCoreFrameworkVersionNumber;
 
@@ -19,10 +19,17 @@ FOUNDATION_EXPORT const unsigned char YTYCoreFrameworkVersionString[];
 // 公开分类：
 #import "UIView+RGSize.h"
 #import "MBProgressHUD+MJ.h"
+#import "UIButton+Extension.h"
+#import "UITextField+Length.h"
+#import "UIView+LayerCorner.h"
+#import "UIViewController+BackButtonHandler.h"
+#import "UIImage+Extension.h"
+
 // 公开的类 ，需要把文件  Headesr - 》public 下
 #import "YTYConfigure.h"
 #import "YTYApiBase.h"
 #import "YTYRequest.h"
+#import "YTYTools.h"
 #import "YTYBaseViewController.h"
 #import "YTYBaseNavigationController.h"
 #import "UIViewController+BackButtonHandler.h"

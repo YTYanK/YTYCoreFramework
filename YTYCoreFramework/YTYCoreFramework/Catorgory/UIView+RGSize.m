@@ -119,10 +119,6 @@
     return frame.origin.x + frame.size.width;
 }
 
-//- (void)setMaxX:(CGFloat)maxX {
-//    CGRect frame = self.frame;
-//}
-
 
 
 - (CGFloat)maxY {

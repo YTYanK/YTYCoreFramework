@@ -6,7 +6,6 @@
 //
 
 #import <MBProgressHUD/MBProgressHUD.h>
-//#import <>
 
 @interface MBProgressHUD (MJ)
 
@@ -22,7 +21,6 @@
 + (MBProgressHUD *)showMessage:(NSString *)message;
 
 + (void)hideHUDForView:(UIView *)view;
-//+ (void)hideHUDForDis:(CGFloat)dis;
 + (void)hideHUD;
 
 
