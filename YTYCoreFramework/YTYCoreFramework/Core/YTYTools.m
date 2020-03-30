@@ -19,6 +19,8 @@
 // 按钮添加下划线
 + (UIButton * _Nonnull)obtainButtonObjectWithString:(nullable NSString *)string forState:(UIControlState)state {
     UIButton *customBtn =[UIButton buttonWithType:UIButtonTypeCustom];
+    NSMutableAttributedString *str = [YTYTools obtainUnderlineWithString:string];
+ /*
     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:string];
     NSRange strRange = {0,[str length]};
     [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:strRange];
@@ -37,10 +39,23 @@
 //     [str addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:1.000 green:0.288 blue:0.268 alpha:1.000] range:rangeCenter];
 //     [str addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.043 green:0.431 blue:0.046 alpha:1.000] range:rangeRight];
     [str addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [str length])];
+    */
+    
     [customBtn setAttributedTitle:str forState:state];
     return customBtn;
 }
 
+
+// 下划线。。设置
++ (NSMutableAttributedString *)obtainUnderlineWithString:(nullable NSString *)string {
+     NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:string];
+        NSRange strRange = {0,[str length]};
+        [str addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:strRange];
+        //Underline 颜色
+    //    [str addAttribute:NSUnderlineColorAttributeName value:[UIColor redColor] range:strRange];
+        [str addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, [str length])];
+    return str;
+}
 
 
 + (CAGradientLayer *)obtainGradientLayerWithFrame:(CGRect)frame {

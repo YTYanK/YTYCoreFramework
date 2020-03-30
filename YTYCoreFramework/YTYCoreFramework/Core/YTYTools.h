@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (UIButton * _Nonnull)obtainButtonObjectWithString:(nullable NSString *)string forState:(UIControlState)state;
 /**
-*   返回一个 NSMutableAttributedString
+*   返回一个 NSMutableAttributedString 带下划线
 *  @param string  字符串
 *
 *  @return NSMutableAttributedString

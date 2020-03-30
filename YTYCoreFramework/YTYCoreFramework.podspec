@@ -24,21 +24,30 @@ Pod::Spec.new do |spec|
   2.核心文件除勒YTYTools、YTYRequest,其余文件直接继承重写方法
   3.Catorgory 是扩展的辅助功能
   DESC
+  
   spec.homepage     = "https://github.com/YTYanK/YTYCoreFramework.git"
   spec.license      = {:type => "MIT", :file => "LICENSE"}
   spec.author       = {"YTYanK" => "872825564@qq.com"}
   spec.source       = { :git => "https://github.com/YTYanK/YTYCoreFramework.git", :tag => "#{spec.version}", :submodules => true} 
+ 
   spec.source_files = 'YTYCoreFramework/**/*.{h,m}'
 
   spec.frameworks = 'Foundation','UIKit'
 
   spec.prefix_header_contents  =  '#import <UIKit/UIKit.h>' , '#import <Foundation/Foundation.h>'
   spec.platform = :ios, "10.0"
- #  spec.xcconfig = {"FRAMEWORK_SESARCH_PATHS" => "$(PLATFORM_DIR)/Developer/Library/Frameworks"}
-  spec.public_header_files = 'Headers/Public/*.h'
-  spec.private_header_files = 'Headers/Private/*.h'
-  spec.resource = 'Resources/MBProgressHUD.bundle'
-  
+  spec.ios.deployment_target = '10.0'  
+
+ # spec.xcconfig = {"FRAMEWORK_SESARCH_PATHS" => "$(PLATFORM_DIR)/Developer/Library/Frameworks"}
+  #spec.public_header_files = 'Headers/Public/*.h'
+#  spec.public_header_files = 'YTYCoreFramework/Public/*.{h,m}'
+#  spec.private_header_files = 'YTYCoreFramework/Private/*.h'
+ #  spec.resources = '/MBProgressHUD.bundle'
+#   spec.resource = 'YTYCoreFramework/Catorgory/MBProgressHUD.bundle'
+#  spec.subspec 'Catorgory' do |s|
+#  s.source_files  = 'YTYCoreFramework/Catorgory/*.{h,m}'
+#  end
+
   spec.dependency "AFNetworking"
   spec.dependency "YYModel", "~>1.0.4"
   spec.dependency "YYCache", "~>1.0.4"
