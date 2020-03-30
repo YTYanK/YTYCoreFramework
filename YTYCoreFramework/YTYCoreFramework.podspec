@@ -32,13 +32,13 @@ Pod::Spec.new do |spec|
  
   spec.source_files = 'YTYCoreFramework/**/*.{h,m}'
 
-  spec.frameworks = 'Foundation','UIKit'
+  spec.frameworks = 'Foundation','UIKit', 'XCTest'
 
   spec.prefix_header_contents  =  '#import <UIKit/UIKit.h>' , '#import <Foundation/Foundation.h>'
   spec.platform = :ios, "10.0"
   spec.ios.deployment_target = '10.0'  
 
- # spec.xcconfig = {"FRAMEWORK_SESARCH_PATHS" => "$(PLATFORM_DIR)/Developer/Library/Frameworks"}
+  spec.xcconfig = {"FRAMEWORK_SESARCH_PATHS" => "$(PLATFORM_DIR)/Developer/Library/Frameworks"}
   #spec.public_header_files = 'Headers/Public/*.h'
 #  spec.public_header_files = 'YTYCoreFramework/Public/*.{h,m}'
 #  spec.private_header_files = 'YTYCoreFramework/Private/*.h'
