@@ -26,27 +26,19 @@ Pod::Spec.new do |spec|
   DESC
   
   spec.homepage     = "https://github.com/YTYanK/YTYCoreFramework.git"
-  spec.license      = {:type => "MIT", :file => "LICENSE"}
+  spec.license      = {:type => "Apache License, Version 2.0", :file => "LICENSE"}
   spec.author       = {"YTYanK" => "872825564@qq.com"}
   spec.source       = { :git => "https://github.com/YTYanK/YTYCoreFramework.git", :tag => "#{spec.version}", :submodules => true} 
  
   spec.source_files = 'YTYCoreFramework/**/*.{h,m}'
 
-  spec.frameworks = 'Foundation','UIKit', 'XCTest'
+  spec.frameworks = 'Foundation','UIKit'
 
   spec.prefix_header_contents  =  '#import <UIKit/UIKit.h>' , '#import <Foundation/Foundation.h>'
   spec.platform = :ios, "10.0"
   spec.ios.deployment_target = '10.0'  
 
   spec.xcconfig = {"FRAMEWORK_SESARCH_PATHS" => "$(PLATFORM_DIR)/Developer/Library/Frameworks"}
-  #spec.public_header_files = 'Headers/Public/*.h'
-#  spec.public_header_files = 'YTYCoreFramework/Public/*.{h,m}'
-#  spec.private_header_files = 'YTYCoreFramework/Private/*.h'
- #  spec.resources = '/MBProgressHUD.bundle'
-#   spec.resource = 'YTYCoreFramework/Catorgory/MBProgressHUD.bundle'
-#  spec.subspec 'Catorgory' do |s|
-#  s.source_files  = 'YTYCoreFramework/Catorgory/*.{h,m}'
-#  end
 
   spec.dependency "AFNetworking"
   spec.dependency "YYModel", "~>1.0.4"

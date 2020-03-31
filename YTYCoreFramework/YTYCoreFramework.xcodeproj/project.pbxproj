@@ -12,8 +12,6 @@
 		3C481506242B534E00882209 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C481503242B534E00882209 /* MBProgressHUD.bundle */; };
 		3C484736240FADC800214589 /* testVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C484733240FADC800214589 /* testVC2.m */; };
 		3C484737240FADC800214589 /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C484735240FADC800214589 /* testVC.m */; };
-		3CB43B2C23FE78F200D50EE0 /* YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */; };
-		3CB43B3123FE78F200D50EE0 /* YTYCoreFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B3023FE78F200D50EE0 /* YTYCoreFrameworkTests.m */; };
 		3CB43B3323FE78F200D50EE0 /* YTYCoreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B2523FE78F200D50EE0 /* YTYCoreFramework.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B4923FE7A1000D50EE0 /* YTYBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3C23FE7A0F00D50EE0 /* YTYBaseNavigationController.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B4A23FE7A1000D50EE0 /* YTYBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3D23FE7A0F00D50EE0 /* YTYBaseTableViewCell.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,13 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3CB43B2D23FE78F200D50EE0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3CB43B1923FE78F200D50EE0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3CB43B2123FE78F200D50EE0;
-			remoteInfo = YTYCoreFramework;
-		};
 		3CB43BB623FE8BCF00D50EE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3CB43B1923FE78F200D50EE0 /* Project object */;
@@ -93,9 +84,6 @@
 		3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YTYCoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB43B2523FE78F200D50EE0 /* YTYCoreFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTYCoreFramework.h; sourceTree = "<group>"; };
 		3CB43B2623FE78F200D50EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CB43B2B23FE78F200D50EE0 /* YTYCoreFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YTYCoreFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CB43B3023FE78F200D50EE0 /* YTYCoreFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTYCoreFrameworkTests.m; sourceTree = "<group>"; };
-		3CB43B3223FE78F200D50EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB43B3C23FE7A0F00D50EE0 /* YTYBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTYBaseNavigationController.h; sourceTree = "<group>"; };
 		3CB43B3D23FE7A0F00D50EE0 /* YTYBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTYBaseTableViewCell.h; sourceTree = "<group>"; };
 		3CB43B3E23FE7A0F00D50EE0 /* YTYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTYBaseViewController.m; sourceTree = "<group>"; };
@@ -156,14 +144,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CB43B2823FE78F200D50EE0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CB43B2C23FE78F200D50EE0 /* YTYCoreFramework.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CB43B9823FE8BCE00D50EE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				3CB43B2423FE78F200D50EE0 /* YTYCoreFramework */,
-				3CB43B2F23FE78F200D50EE0 /* YTYCoreFrameworkTests */,
 				3CB43B9C23FE8BCE00D50EE0 /* YTYCoreFrameworkDemo */,
 				3CB43BB823FE8BCF00D50EE0 /* YTYCoreFrameworkDemoTests */,
 				3CB43BC323FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests */,
@@ -216,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */,
-				3CB43B2B23FE78F200D50EE0 /* YTYCoreFrameworkTests.xctest */,
 				3CB43B9B23FE8BCE00D50EE0 /* YTYCoreFrameworkDemo.app */,
 				3CB43BB523FE8BCF00D50EE0 /* YTYCoreFrameworkDemoTests.xctest */,
 				3CB43BC023FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests.xctest */,
@@ -234,15 +212,6 @@
 				3CB43B2623FE78F200D50EE0 /* Info.plist */,
 			);
 			path = YTYCoreFramework;
-			sourceTree = "<group>";
-		};
-		3CB43B2F23FE78F200D50EE0 /* YTYCoreFrameworkTests */ = {
-			isa = PBXGroup;
-			children = (
-				3CB43B3023FE78F200D50EE0 /* YTYCoreFrameworkTests.m */,
-				3CB43B3223FE78F200D50EE0 /* Info.plist */,
-			);
-			path = YTYCoreFrameworkTests;
 			sourceTree = "<group>";
 		};
 		3CB43B9C23FE8BCE00D50EE0 /* YTYCoreFrameworkDemo */ = {
@@ -387,24 +356,6 @@
 			productReference = 3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3CB43B2A23FE78F200D50EE0 /* YTYCoreFrameworkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CB43B3923FE78F200D50EE0 /* Build configuration list for PBXNativeTarget "YTYCoreFrameworkTests" */;
-			buildPhases = (
-				3CB43B2723FE78F200D50EE0 /* Sources */,
-				3CB43B2823FE78F200D50EE0 /* Frameworks */,
-				3CB43B2923FE78F200D50EE0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3CB43B2E23FE78F200D50EE0 /* PBXTargetDependency */,
-			);
-			name = YTYCoreFrameworkTests;
-			productName = YTYCoreFrameworkTests;
-			productReference = 3CB43B2B23FE78F200D50EE0 /* YTYCoreFrameworkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		3CB43B9A23FE8BCE00D50EE0 /* YTYCoreFrameworkDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CB43BC723FE8BCF00D50EE0 /* Build configuration list for PBXNativeTarget "YTYCoreFrameworkDemo" */;
@@ -470,9 +421,6 @@
 					3CB43B2123FE78F200D50EE0 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
-					3CB43B2A23FE78F200D50EE0 = {
-						CreatedOnToolsVersion = 11.2.1;
-					};
 					3CB43B9A23FE8BCE00D50EE0 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -500,7 +448,6 @@
 			projectRoot = "";
 			targets = (
 				3CB43B2123FE78F200D50EE0 /* YTYCoreFramework */,
-				3CB43B2A23FE78F200D50EE0 /* YTYCoreFrameworkTests */,
 				3CB43B9A23FE8BCE00D50EE0 /* YTYCoreFrameworkDemo */,
 				3CB43BB423FE8BCF00D50EE0 /* YTYCoreFrameworkDemoTests */,
 				3CB43BBF23FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests */,
@@ -514,13 +461,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C481506242B534E00882209 /* MBProgressHUD.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3CB43B2923FE78F200D50EE0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,14 +538,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CB43B2723FE78F200D50EE0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CB43B3123FE78F200D50EE0 /* YTYCoreFrameworkTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3CB43B9723FE8BCE00D50EE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -638,11 +570,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3CB43B2E23FE78F200D50EE0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3CB43B2123FE78F200D50EE0 /* YTYCoreFramework */;
-			targetProxy = 3CB43B2D23FE78F200D50EE0 /* PBXContainerItemProxy */;
-		};
 		3CB43BB723FE8BCF00D50EE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3CB43B9A23FE8BCE00D50EE0 /* YTYCoreFrameworkDemo */;
@@ -867,40 +794,6 @@
 			};
 			name = Release;
 		};
-		3CB43B3A23FE78F200D50EE0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4UCREBK6TA;
-				INFOPLIST_FILE = YTYCoreFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = YTYanK.YTYCoreFrameworkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3CB43B3B23FE78F200D50EE0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4UCREBK6TA;
-				INFOPLIST_FILE = YTYCoreFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = YTYanK.YTYCoreFrameworkTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		3CB43BC823FE8BCF00D50EE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1028,15 +921,6 @@
 			buildConfigurations = (
 				3CB43B3723FE78F200D50EE0 /* Debug */,
 				3CB43B3823FE78F200D50EE0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CB43B3923FE78F200D50EE0 /* Build configuration list for PBXNativeTarget "YTYCoreFrameworkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CB43B3A23FE78F200D50EE0 /* Debug */,
-				3CB43B3B23FE78F200D50EE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
