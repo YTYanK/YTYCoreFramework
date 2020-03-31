@@ -35,7 +35,7 @@ Pod::Spec.new do |spec|
 
   spec.resource = "YTYCoreFramework/CAtorgory/MBProgressHUD.bundle"
   
-  spec.dependency "AFNetworking"
+  spec.dependency "AFNetworking", "~>3.2.1"
   spec.dependency "YYModel", "~>1.0.4"
   spec.dependency "YYCache", "~>1.0.4"
   spec.dependency "MJRefresh", "~>3.1.12"
