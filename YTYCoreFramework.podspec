@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   DESC
   
   spec.homepage     = "https://github.com/YTYanK/YTYCoreFramework.git"
-  spec.license      = {:type => "Apache License, Version 2.0", :file => "LICENSE"}
+  spec.license      = {:type => "Apache-2.0", :file => "LICENSE"}
   spec.author       = {"YTYanK" => "872825564@qq.com"}
   spec.source       = { :git => "https://github.com/YTYanK/YTYCoreFramework.git", :tag => "#{spec.version}", :submodules => true} 
  

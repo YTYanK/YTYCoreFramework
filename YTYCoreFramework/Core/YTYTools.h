@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 *
 *  @return NSMutableAttributedString
 */
-+ (NSMutableAttributedString *)obtainUnderlineWithString:(nullable NSString *)string;
++ (NSMutableAttributedString * _Nonnull)obtainUnderlineWithString:(nullable NSString *)string;
 
 /**
  *  获取一个 渐变色 Layer  对象
