@@ -29,7 +29,13 @@
 /// 设置bar 样式
 
 + (void)setupNavigationBarTheme {
-    UINavigationBar *navBar =[UINavigationBar appearanceWhenContainedIn:[YTYBaseNavigationController class], nil];
+    UINavigationBar *navBar = nil;
+//    if (@available(iOS 9.0, *)) {
+        navBar =[UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[YTYBaseNavigationController class]]];
+//    }else {
+//      navBar = [UINavigationBar appearanceWhenContainedIn:[YTYBaseNavigationController class], nil];
+//    }
+    
     NSString *navBarBg = @"";
     if (@available(iOS 8.2, *)) {
         [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor greenColor], NSShadowAttributeName : [[NSShadow alloc] init], NSFontAttributeName : [UIFont systemFontOfSize:18.0 weight:UIFontWeightBold]}];

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C481504242B534E00882209 /* MBProgressHUD+MJ.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C481501242B534E00882209 /* MBProgressHUD+MJ.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3C481505242B534E00882209 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C481502242B534E00882209 /* MBProgressHUD+MJ.m */; };
-		3C481506242B534E00882209 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C481503242B534E00882209 /* MBProgressHUD.bundle */; };
+		3C481506242B534E00882209 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C481503242B534E00882209 /* MBProgressHUD.bundle */; platformFilter = ios; };
 		3C484736240FADC800214589 /* testVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C484733240FADC800214589 /* testVC2.m */; };
 		3C484737240FADC800214589 /* testVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C484735240FADC800214589 /* testVC.m */; };
 		3CB43B3323FE78F200D50EE0 /* YTYCoreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B2523FE78F200D50EE0 /* YTYCoreFramework.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,12 +20,10 @@
 		3CB43B4D23FE7A1000D50EE0 /* YTYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4023FE7A0F00D50EE0 /* YTYBaseNavigationController.m */; };
 		3CB43B4E23FE7A1000D50EE0 /* YTYApiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4123FE7A0F00D50EE0 /* YTYApiBase.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B4F23FE7A1000D50EE0 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4223FE7A0F00D50EE0 /* UIViewController+BackButtonHandler.m */; };
-		3CB43B5023FE7A1000D50EE0 /* UIView+RGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4323FE7A0F00D50EE0 /* UIView+RGSize.m */; };
 		3CB43B5123FE7A1000D50EE0 /* YTYBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4423FE7A0F00D50EE0 /* YTYBaseTableViewCell.m */; };
 		3CB43B5223FE7A1000D50EE0 /* YTYApiBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B4523FE7A1000D50EE0 /* YTYApiBase.m */; };
 		3CB43B5323FE7A1000D50EE0 /* YTYBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4623FE7A1000D50EE0 /* YTYBaseViewController.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B5423FE7A1000D50EE0 /* YTYConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4723FE7A1000D50EE0 /* YTYConfigure.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
-		3CB43B5523FE7A1000D50EE0 /* UIView+RGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B4823FE7A1000D50EE0 /* UIView+RGSize.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B9F23FE8BCE00D50EE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43B9E23FE8BCE00D50EE0 /* AppDelegate.m */; };
 		3CB43BA223FE8BCE00D50EE0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43BA123FE8BCE00D50EE0 /* SceneDelegate.m */; };
 		3CB43BA523FE8BCE00D50EE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43BA423FE8BCE00D50EE0 /* ViewController.m */; };
@@ -36,20 +34,22 @@
 		3CB43BBA23FE8BCF00D50EE0 /* YTYCoreFrameworkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43BB923FE8BCF00D50EE0 /* YTYCoreFrameworkDemoTests.m */; };
 		3CB43BC523FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB43BC423FE8BCF00D50EE0 /* YTYCoreFrameworkDemoUITests.m */; };
 		3CB43BD123FE8D0300D50EE0 /* YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */; };
-		3CB90FE7242D941B00819C3B /* UIButton+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FDD242D941B00819C3B /* UIButton+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CB90FE8242D941B00819C3B /* UITextField+Length.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FDE242D941B00819C3B /* UITextField+Length.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB90FE7242D941B00819C3B /* UIButton+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FDD242D941B00819C3B /* UIButton+Extension.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB90FE8242D941B00819C3B /* UITextField+Length.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FDE242D941B00819C3B /* UITextField+Length.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB90FE9242D941B00819C3B /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB90FDF242D941B00819C3B /* UIImage+Extension.m */; };
-		3CB90FEA242D941B00819C3B /* UIImage+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FE0242D941B00819C3B /* UIImage+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB90FEA242D941B00819C3B /* UIImage+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FE0242D941B00819C3B /* UIImage+Extension.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB90FEB242D941B00819C3B /* UITextField+Length.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB90FE1242D941B00819C3B /* UITextField+Length.m */; };
-		3CB90FEC242D941B00819C3B /* UILabel+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FE2242D941B00819C3B /* UILabel+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3CB90FED242D941B00819C3B /* UIView+LayerCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FE3242D941B00819C3B /* UIView+LayerCorner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB90FEC242D941B00819C3B /* UILabel+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FE2242D941B00819C3B /* UILabel+Extension.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB90FED242D941B00819C3B /* UIView+LayerCorner.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FE3242D941B00819C3B /* UIView+LayerCorner.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB90FEE242D941B00819C3B /* UIView+LayerCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB90FE4242D941B00819C3B /* UIView+LayerCorner.m */; };
 		3CB90FEF242D941B00819C3B /* UIButton+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB90FE5242D941B00819C3B /* UIButton+Extension.m */; };
 		3CB90FF0242D941B00819C3B /* UILabel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB90FE6242D941B00819C3B /* UILabel+Extension.m */; };
-		3CB90FF3242DA0E900819C3B /* NSString+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FF1242DA0E900819C3B /* NSString+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB90FF3242DA0E900819C3B /* NSString+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FF1242DA0E900819C3B /* NSString+Extension.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB90FF4242DA0E900819C3B /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB90FF2242DA0E900819C3B /* NSString+Extension.m */; };
-		3CB90FF7242DDB5B00819C3B /* YTYTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FF5242DDB5B00819C3B /* YTYTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CB90FF7242DDB5B00819C3B /* YTYTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB90FF5242DDB5B00819C3B /* YTYTools.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB90FF8242DDB5B00819C3B /* YTYTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB90FF6242DDB5B00819C3B /* YTYTools.m */; };
+		3CB9100D24332B3700819C3B /* UIView+RGSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9100B24332B3700819C3B /* UIView+RGSize.m */; };
+		3CB9100E24332B3700819C3B /* UIView+RGSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB9100C24332B3700819C3B /* UIView+RGSize.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CC8CB5F2412557A00EDEE71 /* YTYRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC8CB5D2412557A00EDEE71 /* YTYRequest.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CC8CB602412557A00EDEE71 /* YTYRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8CB5E2412557A00EDEE71 /* YTYRequest.m */; };
 		B46AF0BBD2D1B2E1A4B79FB6 /* Pods_YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3CD67DD5150BDFD83D2BCC /* Pods_YTYCoreFramework.framework */; };
@@ -91,12 +91,10 @@
 		3CB43B4023FE7A0F00D50EE0 /* YTYBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTYBaseNavigationController.m; sourceTree = "<group>"; };
 		3CB43B4123FE7A0F00D50EE0 /* YTYApiBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTYApiBase.h; sourceTree = "<group>"; };
 		3CB43B4223FE7A0F00D50EE0 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
-		3CB43B4323FE7A0F00D50EE0 /* UIView+RGSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RGSize.m"; sourceTree = "<group>"; };
 		3CB43B4423FE7A0F00D50EE0 /* YTYBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTYBaseTableViewCell.m; sourceTree = "<group>"; };
 		3CB43B4523FE7A1000D50EE0 /* YTYApiBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTYApiBase.m; sourceTree = "<group>"; };
 		3CB43B4623FE7A1000D50EE0 /* YTYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTYBaseViewController.h; sourceTree = "<group>"; };
 		3CB43B4723FE7A1000D50EE0 /* YTYConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTYConfigure.h; sourceTree = "<group>"; };
-		3CB43B4823FE7A1000D50EE0 /* UIView+RGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RGSize.h"; sourceTree = "<group>"; };
 		3CB43B9B23FE8BCE00D50EE0 /* YTYCoreFrameworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTYCoreFrameworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB43B9D23FE8BCE00D50EE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3CB43B9E23FE8BCE00D50EE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,6 +127,8 @@
 		3CB90FF2242DA0E900819C3B /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		3CB90FF5242DDB5B00819C3B /* YTYTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTYTools.h; sourceTree = "<group>"; };
 		3CB90FF6242DDB5B00819C3B /* YTYTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTYTools.m; sourceTree = "<group>"; };
+		3CB9100B24332B3700819C3B /* UIView+RGSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RGSize.m"; sourceTree = "<group>"; };
+		3CB9100C24332B3700819C3B /* UIView+RGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RGSize.h"; sourceTree = "<group>"; };
 		3CC8CB5D2412557A00EDEE71 /* YTYRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTYRequest.h; sourceTree = "<group>"; };
 		3CC8CB5E2412557A00EDEE71 /* YTYRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTYRequest.m; sourceTree = "<group>"; };
 		9D3CD67DD5150BDFD83D2BCC /* Pods_YTYCoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTYCoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +265,8 @@
 		3CB90FDB242D92CE00819C3B /* Catorgory */ = {
 			isa = PBXGroup;
 			children = (
+				3CB9100C24332B3700819C3B /* UIView+RGSize.h */,
+				3CB9100B24332B3700819C3B /* UIView+RGSize.m */,
 				3CB90FDD242D941B00819C3B /* UIButton+Extension.h */,
 				3CB90FE5242D941B00819C3B /* UIButton+Extension.m */,
 				3CB90FE0242D941B00819C3B /* UIImage+Extension.h */,
@@ -275,8 +277,6 @@
 				3CB90FE1242D941B00819C3B /* UITextField+Length.m */,
 				3CB90FE3242D941B00819C3B /* UIView+LayerCorner.h */,
 				3CB90FE4242D941B00819C3B /* UIView+LayerCorner.m */,
-				3CB43B4823FE7A1000D50EE0 /* UIView+RGSize.h */,
-				3CB43B4323FE7A0F00D50EE0 /* UIView+RGSize.m */,
 				3CB43B3F23FE7A0F00D50EE0 /* UIViewController+BackButtonHandler.h */,
 				3CB43B4223FE7A0F00D50EE0 /* UIViewController+BackButtonHandler.m */,
 				3C481503242B534E00882209 /* MBProgressHUD.bundle */,
@@ -327,8 +327,8 @@
 				3CB90FF3242DA0E900819C3B /* NSString+Extension.h in Headers */,
 				3CB90FF7242DDB5B00819C3B /* YTYTools.h in Headers */,
 				3CB90FE7242D941B00819C3B /* UIButton+Extension.h in Headers */,
-				3CB43B5523FE7A1000D50EE0 /* UIView+RGSize.h in Headers */,
 				3C481504242B534E00882209 /* MBProgressHUD+MJ.h in Headers */,
+				3CB9100E24332B3700819C3B /* UIView+RGSize.h in Headers */,
 				3CB43B4E23FE7A1000D50EE0 /* YTYApiBase.h in Headers */,
 				3CB43B3323FE78F200D50EE0 /* YTYCoreFramework.h in Headers */,
 			);
@@ -520,11 +520,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB9100D24332B3700819C3B /* UIView+RGSize.m in Sources */,
 				3CB43B4B23FE7A1000D50EE0 /* YTYBaseViewController.m in Sources */,
 				3CB90FEF242D941B00819C3B /* UIButton+Extension.m in Sources */,
 				3CB43B4F23FE7A1000D50EE0 /* UIViewController+BackButtonHandler.m in Sources */,
 				3CB43B5123FE7A1000D50EE0 /* YTYBaseTableViewCell.m in Sources */,
-				3CB43B5023FE7A1000D50EE0 /* UIView+RGSize.m in Sources */,
 				3CB90FF8242DDB5B00819C3B /* YTYTools.m in Sources */,
 				3C481505242B534E00882209 /* MBProgressHUD+MJ.m in Sources */,
 				3CB90FEB242D941B00819C3B /* UITextField+Length.m in Sources */,
@@ -653,7 +653,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -708,7 +708,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -739,7 +739,7 @@
 				);
 				INFOPLIST_FILE = YTYCoreFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -752,7 +752,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = YTYanK.YTYCoreFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -777,7 +778,7 @@
 				);
 				INFOPLIST_FILE = YTYCoreFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,7 +791,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = YTYanK.YTYCoreFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

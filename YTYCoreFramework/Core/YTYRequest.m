@@ -20,11 +20,9 @@ yty_for_implementation(YTYRequest)
 }
 
 
-- (AFHTTPRequestSerializer * _Nonnull)rSerializer {
-    if(_rSerializer == nil){
-       return _rSerializer = [AFHTTPResponseSerializer serializer];
-    }
-    return _rSerializer;
+- (AFHTTPResponseSerializer * _Nonnull)rSerializer {
+//    if(_rSerializer == nil){
+    return [AFHTTPResponseSerializer serializer];
 }
 
 

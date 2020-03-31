@@ -46,7 +46,6 @@
 /**
  *  实现图片的缩小或者放大
  *
- *  @param image 原图
  *  @param size  大小范围
  *
  *  @return 新的图片
@@ -235,7 +234,7 @@
     CGContextSaveGState(context);
     
     // 设置一个范围
-    CGRect rect = (CGRect){{0,0},imageSize};
+//    CGRect rect = (CGRect){{0,0},imageSize};
     
 
 //    // 4.画边框(大圆)

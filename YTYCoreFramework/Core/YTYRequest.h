@@ -19,7 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) NetObtainDataStatus obtainStatus;
 @property (assign, nonatomic) NetMethod method;
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
-@property (strong, nonatomic) AFHTTPRequestSerializer * _Nonnull rSerializer;
+@property (strong, nonatomic, nonnull) AFHTTPRequestSerializer * rSerializer;
+//@property (strong, nonatomic) AFHTTPRequestSerializer * _Nonnull rSerializer;
 @property (strong, nonatomic) YTYErrorBlock errorBlock;
 
 yty_for_interface(YTYRequest)
