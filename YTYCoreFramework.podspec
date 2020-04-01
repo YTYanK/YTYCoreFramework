@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "YTYCoreFramework 基础构建框架"
   spec.description  = <<-DESC
   发布构建框架
