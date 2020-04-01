@@ -7,7 +7,8 @@ target 'YTYCoreFramework' do
    pod 'MJRefresh', '~> 3.1.12'
    pod 'YYCache'     ,'1.0.4'           #缓存
    pod 'YYModel'     ,'1.0.4'           #模型处理
-#   target 'YTYCoreFramework'
+#   pod 'YTYCoreFramework'
+
    
 end
 

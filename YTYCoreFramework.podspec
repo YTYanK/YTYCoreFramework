@@ -23,7 +23,8 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/YTYanK/YTYCoreFramework.git", :tag => "v#{spec.version}", :submodules => true} 
  
   spec.source_files = "YTYCoreFramework","YTYCoreFramework/*.{h}","YTYCoreFramework/Core/*.{h,m}","YTYCoreFramework/Catorgory/*.{h,m}"
-  
+  spec.exclude_files = "YTYCoreFramework/**/unused.{m}"
+#  spec.public_header_files = 'Headers/Public/*.h'
   spec.frameworks = 'Foundation','UIKit'
   
   #spec.prefix_header_contents  =  '#import <UIKit/UIKit.h>' , '#import <Foundation/Foundation.h>'
