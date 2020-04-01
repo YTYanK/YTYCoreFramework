@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "YTYCoreFramework 基础构建框架"
   spec.description  = <<-DESC
   发布构建框架
@@ -19,7 +19,6 @@ Pod::Spec.new do |spec|
   
   spec.homepage     = "https://github.com/YTYanK/YTYCoreFramework.git"
   spec.license      = {:type => "Apache License, Version 2.0", :file => "LICENSE"}
-  #spec.license = 'Apache License, Version 2.0'
   spec.author       = {"YTYanK" => "872825564@qq.com"}
   spec.source       = { :git => "https://github.com/YTYanK/YTYCoreFramework.git", :tag => "v#{spec.version}", :submodules => true} 
  
