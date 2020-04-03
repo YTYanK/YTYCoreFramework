@@ -8,8 +8,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.0.5"
-  spec.summary      = "YTYCoreFramework 基础构建框架"
+  spec.version      = "0.0.6"
+  spec.summary      = "删除多余属性，修改YTYTools"
   spec.description  = <<-DESC
   发布构建框架
   1.构建的框架分成两个部分Core、Catorgory
@@ -23,8 +23,9 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/YTYanK/YTYCoreFramework.git", :tag => "v#{spec.version}", :submodules => true} 
  
    spec.source_files = "YTYCoreFramework","YTYCoreFramework/*.{h}","YTYCoreFramework/Core/*.{h,m}","YTYCoreFramework/Catorgory/*.{h,m}"
+   spec.public_header_files = "YTYCoreFramework/**/*.{h}"
 #  spec.source_files = "YTYCoreFramework/YTYCoreFramework.h","YTYCoreFramework/YTYConfigure.h"
-
+     
 #  spec.subspec 'Core' do |ss|
 #    ss.source_files = "YTYCoreFramework","YTYCoreFramework/*.{h}","YTYCoreFramework/YTYConfigure.h","YTYCoreFramework/Core/*.{h,m}"
 #  end 

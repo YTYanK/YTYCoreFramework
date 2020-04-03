@@ -46,7 +46,7 @@
 }
 
 
-// 下划线。。设置
+// 设置下划线
 + (NSMutableAttributedString *)obtainUnderlineWithString:(nullable NSString *)string {
      NSMutableAttributedString *str = [[NSMutableAttributedString alloc] initWithString:string];
         NSRange strRange = {0,[str length]};
@@ -79,5 +79,22 @@
     gradientLayer.cornerRadius = radius;
     return gradientLayer;
 }
+
+// 返回一个NavButtonItem
++ (UIBarButtonItem *)obtainBackItemWithTarget:(nullable id)target action:(nullable SEL)action image:(UIImage *)image {
+//       UIImage *backImage = [[UIImage imageNamed:@"退出"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+        // 自定义VIew
+        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.frame =CGRectMake(-50, 0, 45, 45); //CGRectMake(-40, 0, 45, 45);
+    //    button.backgroundColor =UIColor.redColor;
+        button.imageEdgeInsets =  UIEdgeInsetsMake(0, 0, 0, 26);
+    //    [button setTitle:@"返回" forState:UIControlStateNormal];
+        [button setImage:image forState:UIControlStateNormal];
+        [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem * backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+     //   self.navigationItem.leftBarButtonItem = backButtonItem;
+    return backButtonItem;
+}
+
 
 @end

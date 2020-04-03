@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "YTYConfigure.h"
 
-/**
-   YTYApiBase 是请求Api管理基类，主要作用于  数据模型 与 请求Api 的调度，及Api 请求到数据之后的数据缓存。
-*/
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -33,7 +31,9 @@ NS_ASSUME_NONNULL_BEGIN
 //#define YTAY_GET_NSUD(KEY) [NSUD get]
 
 
-
+/**
+   YTYApiBase 是请求Api管理基类，主要作用于  数据模型 与 请求Api 的调度，及Api 请求到数据之后的数据缓存。
+*/
 @interface YTYApiBase : NSObject
 yty_for_interface(YTYApiBase)
 

@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Cell 初始化方法
+ * @param tableView  列表对象
+ * @param identifier 标记   ⚠️ identifier 与类名字一致
  */
 + (instancetype)initCellWithCellView:(UITableView *)tableView reuseIdentifier:(NSString *)identifier;
 

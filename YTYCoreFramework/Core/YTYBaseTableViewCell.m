@@ -27,7 +27,6 @@
  */
 + (instancetype)initCellWithCellView:(UITableView *)tableView reuseIdentifier:(NSString *)identifier {
     // 因为identifier 与类名字一致
-    
     YTYBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         
@@ -48,6 +47,7 @@
     return cell;
 }
 
+/// 用于语音切换
 - (void)cellUpdateLanguage {}
 
 

@@ -38,9 +38,6 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
     return self;
 }
 
-
-
-
 // 会先加载父类 viewDidLoad ， 再加载子类 viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,24 +52,9 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
     NSLog(@"查看%@", [UINavigationBar appearance]);
 }
 
-
-//+ (void)load {
-//   // [super load];
-//    NSLog(@"处理？？？");
-//    //
-//}
-//
-//
-//
-//+ (void)initialize {
-//    // 不明白为什么加载两次？
-//    NSLog(@"处理-->%s",__func__);
-//}
-
 - (void)initConfigure {
   _page = 1;
   _isCustomTable = NO;
-  _isShowNavigation = NO;
 }
 
 
@@ -99,57 +81,6 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
     }
 }
 
-//- (void)setIsShowNavigation:(BOOL)isShowNavigation {
-//    if (_isShowNavigation != isShowNavigation) {
-//        _isShowNavigation = isShowNavigation;
-//
-//
-//    }
-//}
-//
-//
-//- (void)setBaseNC:(UINavigationController *)baseNC {
-//    if (_baseNC != baseNC) {
-//        _baseNC = baseNC;
-//    }
-//}
-//
-//
-//
-//- (void)setBaseImage:(UIImage *)baseImage {
-//    if (_baseImage != baseImage) {
-//        _baseImage = baseImage;
-//    }
-//
-//    if (self.baseNC != nil) {
-//          [self.baseNC.navigationBar setBackgroundImage:[UIImage imageNamed:@"矩形.png"] forBarMetrics:UIBarMetricsDefault];
-//    }
-//
-//}
-
-
-//// 初始化 Navigattion
-//- (void)initNavigaionAddVC:(UIViewController *)vc {
-////       [UINavigationBar appearance];
-//
-//    UINavigationController *newtestNav = [[UINavigationController alloc] initWithRootViewController:vc];
-//
-//    newtestNav.navigationBar.barTintColor = [UIColor redColor];
-//    [newtestNav.navigationBar setTintColor:[UIColor greenColor]];
-//    newtestNav.navigationBar.translucent  = YES;
-//
-//    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
-//    attributes[NSForegroundColorAttributeName] = [UIColor orangeColor];
-//    attributes[NSFontAttributeName] = [UIFont systemFontOfSize:18];;
-//    newtestNav.navigationBar.titleTextAttributes = attributes;
-//
-//    [newtestNav.navigationBar setBackgroundImage:[UIImage imageNamed:@"矩形.png"] forBarMetrics:UIBarMetricsDefault];
-//    self.baseNC = newtestNav;
-//}
-
-
-
-
 
 
 // 初始化 table
@@ -157,10 +88,9 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
     if (tableView != nil) {
         tableView.delegate = self;
         tableView.dataSource = self;
-        if (self.isCustomTable == NO) {
+        if (self.isCustomTable == NO) { // 非自定义Table
             [self.view addSubview: tableView];
             [self.view bringSubviewToFront:tableView];
-//            tableView.frame = CGRectMake(self.view.left, SCREEN_NAV_BAR, self.view.width, self.view.height - SCREEN_NAV_BAR);
              tableView.frame = CGRectMake(self.view.frame.origin.x, SCREEN_NAV_BAR, self.view.frame.size.width, self.view.frame.size.height - SCREEN_NAV_BAR);
         }
         
@@ -174,9 +104,7 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 
 
 #pragma mark - TableView DataSource / Delegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"Base->>%li",(long)indexPath.row);
-}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {}
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
@@ -186,7 +114,10 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     self.baseCell = [YTYBaseTableViewCell initCellWithCellView:tableView reuseIdentifier:cellIdentifier];
     self.baseCell.nestingTableView = self.baseTableView;
-    // 添加 Cell 外部添加样式 操作
+    /**
+         添加 Cell 内容，通过“additionlBlock ” 属性返回，进行添加样式操作
+        一般用于纯代码操作，或者进行Cell 的内容更新
+     */
     if(self.additionalBlock != nil) {
         self.additionalBlock(self.baseCell);
     }
@@ -194,11 +125,9 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 }
 
 #pragma mark - TableView Refresh / Load
-// 刷新
-- (void)tableRefreshData {
-}
-- (void)tableLoadData {
-}
+- (void)tableRefreshData {} // 刷新
+- (void)tableLoadData {} // 加载
+
 /*
 #pragma mark - Navigation
 

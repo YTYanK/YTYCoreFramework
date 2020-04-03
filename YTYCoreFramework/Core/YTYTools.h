@@ -14,8 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YTYTools : NSObject
 /**
- *     获取一个手势对象
- *
+ *  获取一个手势对象
  *  @param action 方法
  *  @param target 对象
  *
@@ -43,10 +42,23 @@ NS_ASSUME_NONNULL_BEGIN
  *  获取一个 渐变色 Layer  对象
  *  @param frame - 对象 frame
  *  @return CAGradientLayer
-*/
+ */
 + (CAGradientLayer *)obtainGradientLayerWithFrame:(CGRect)frame;
 + (CAGradientLayer *)obtainGradientLayerWithFrame:(CGRect)frame cornerRadius:(CGFloat)radius;
 + (CAGradientLayer *)obtainGradientLayerWithFrame:(CGRect)frame cornerRadius:(CGFloat)radius  colors:(NSArray *)colors;
+
+
+/**
+ * 获取一个UIBarButtonItem 对象
+ * @param target  接受事件的对象
+ * @param action  事件方法
+ * @param image 图片
+ * @return UIBarButtonItem
+ */
+
++ (UIBarButtonItem *)obtainBackItemWithTarget:(nullable id)target action:(nullable SEL)action image:(UIImage * _Nonnull)image;
+
+
 
 
 @end

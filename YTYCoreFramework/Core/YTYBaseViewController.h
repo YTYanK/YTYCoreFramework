@@ -13,19 +13,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-
-
-
-
-
-
-
 @protocol YTYBaseViewControllerDelegate <NSObject>
 
 @optional
-/** 代理方法  更新本地化语言  */
-- (void)baseUpdateLanguage;
+///** 代理方法  更新本地化语言  */
+//- (void)baseUpdateLanguage;
 
 @end
 
@@ -42,23 +34,32 @@ typedef void(^BaseUpdateData)(id vc);
  *     默认 Cell 高度 = 120， 数量 1个
  */
 @property (nonatomic, strong) UITableView *baseTableView;
-/// 是否自定义 Table 布局
+/// 是否自定义 Table 布局, 需要自定义时，记得设置 true  默认 false
 @property (assign, nonatomic) BOOL isCustomTable;
 /// 自带的 Cell 对象， 如果没有 baseTableView 实例对象 时， cell = nil;
 @property (strong, nonatomic) YTYBaseTableViewCell *baseCell;
-///  页数
+/// 页数
 @property (nonatomic, assign) int page;
 /// 导航栏颜色
-@property (strong, nonatomic) UIColor * baseNavBarBgColor;
-@property (strong, nonatomic) NSFont * baseTitleFont;
-@property (strong, nonatomic) UIImage * baseImage;
-@property (assign, nonatomic) BOOL isShowNavigation;
-
-@property (strong, nonatomic) UINavigationController * baseNC;
-
+//@property (strong, nonatomic) UIColor * baseNavBarBgColor;
+//@property (strong, nonatomic) NSFont * baseTitleFont;
+//@property (strong, nonatomic) UIImage * baseImage;
+//@property (assign, nonatomic) BOOL isShowNavigation;
+//@property (strong, nonatomic) UINavigationController * baseNC;
 
 
-/// 更新操作
+
+
+/**
+  更新操作
+  例子：
+  - (void)viewWillAppear:(BOOL)animated {
+      [super viewWillAppear:animated];
+      if (self.updateData != nil) {
+          self.updateData(self);
+      }
+  }
+ */
 @property (nonatomic, strong) BaseUpdateData updateData;
 /**
  *   更新操作 Cell 内部组件、或者手动添加组件
@@ -68,8 +69,9 @@ typedef void(^BaseUpdateData)(id vc);
 @property (strong, nonatomic) CellAdditionalBlock  additionalBlock;
 
 
-
+///  刷新对象
 @property (strong, nonatomic) MJRefreshNormalHeader * header;
+///  加载对象
 @property (strong, nonatomic) MJRefreshBackNormalFooter * footer;
 
 //- (init)initNavigaionAddVC:(UIViewController *)vc;

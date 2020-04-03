@@ -24,6 +24,8 @@ FOUNDATION_EXPORT const unsigned char YTYCoreFrameworkVersionString[];
 #import "UIView+LayerCorner.h"
 #import "UIViewController+BackButtonHandler.h"
 #import "UIImage+Extension.h"
+#import "NSString+Extension.h"
+#import "UILabel+Extension.h"
 
 // 公开的类 ，需要把文件  Headesr - 》public 下
 #import "YTYConfigure.h"
