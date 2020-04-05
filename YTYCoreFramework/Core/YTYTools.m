@@ -82,18 +82,18 @@
 
 // 返回一个NavButtonItem
 + (UIBarButtonItem *)obtainBackItemWithTarget:(nullable id)target action:(nullable SEL)action image:(UIImage *)image {
-//       UIImage *backImage = [[UIImage imageNamed:@"退出"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
-        // 自定义VIew
+        // 自定义View
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame =CGRectMake(-50, 0, 45, 45); //CGRectMake(-40, 0, 45, 45);
-    //    button.backgroundColor =UIColor.redColor;
-        button.imageEdgeInsets =  UIEdgeInsetsMake(0, 0, 0, 26);
-    //    [button setTitle:@"返回" forState:UIControlStateNormal];
+        button.frame =CGRectMake(-45, 0, 45, 45);
+        button.imageEdgeInsets =  UIEdgeInsetsMake(0, 0, 0, 20);
         [button setImage:image forState:UIControlStateNormal];
         [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-        UIBarButtonItem * backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-     //   self.navigationItem.leftBarButtonItem = backButtonItem;
-    return backButtonItem;
+    return [YTYTools obtainItemWithCustomView:button];
+}
+
++ (UIBarButtonItem *)obtainItemWithCustomView:(UIView *)customView {
+    UIBarButtonItem * backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:customView];
+      return backButtonItem;
 }
 
 
