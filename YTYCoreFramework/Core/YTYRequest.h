@@ -6,7 +6,8 @@
 //  Copyright © 2020 YTYanK. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+
+//#import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 #import "YTYConfigure.h"
 

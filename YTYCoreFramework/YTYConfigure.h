@@ -7,6 +7,7 @@
 //
 
 #ifndef YTYConfigure_h
+#import <Foundation/Foundation.h>
 #define YTYConfigure_h
 
 
