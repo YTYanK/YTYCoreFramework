@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "重构Core、Catorgory内容，并且完善方法"
   spec.description  = <<-DESC
   构建框架
@@ -23,6 +23,7 @@ Pod::Spec.new do |spec|
      
   spec.subspec 'Catorgory' do |ss|
     ss.source_files = "YTYCoreFramework/Catorgory/*.{h,m}"
+    ss.public_header_files = "YTYCoreFramework/Catorgory/*.h"
     ss.frameworks = 'Foundation','UIKit'
     ss.dependency "MBProgressHUD", "~>1.2.0"
   end 
@@ -46,15 +47,16 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '9.0'  
   spec.requires_arc = true 
   spec.xcconfig = {"FRAMEWORK_SESARCH_PATHS" => "$(PLATFORM_DIR)/Developer/Library/Frameworks"}
+  #spec.ios.pod_target_xcconfig = {OTHER_LDFLAGS => "-ObjC"}
+  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
   #-- 资源 --#
   spec.resource = "YTYCoreFramework/Catorgory/MBProgressHUD.bundle"
-  #spec.resource = "YTYCoreFramework/*.png'
+  #spec.resource = "YTYCoreFramework/back.png'
   #-- 依赖 --#
   spec.dependency "AFNetworking", "~>3.2.1"
   spec.dependency "YYModel", "~>1.0.4"
   spec.dependency "YYCache", "~>1.0.4"
   spec.dependency "MJRefresh", "~>3.1.12"
-  spec.dependency "MBProgressHUD", "~>1.2.0"
 
  end
