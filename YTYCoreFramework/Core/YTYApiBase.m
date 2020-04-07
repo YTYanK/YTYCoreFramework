@@ -7,7 +7,7 @@
 //
 
 #import "YTYApiBase.h"
-#import <YTYCoreFramework/YTYRequest.h>
+#import "YTYRequest.h"
 
 @implementation YTYApiBase
 yty_for_implementation(YTYApiBase)

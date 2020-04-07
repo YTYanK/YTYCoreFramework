@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.0.8"
+  spec.version      = "0.0.9"
   spec.summary      = "删除多余属性，修改YTYTools"
   spec.description  = <<-DESC
   发布构建框架
@@ -17,18 +17,19 @@ Pod::Spec.new do |spec|
  
 #   spec.source_files = "YTYCoreFramework","YTYCoreFramework/*.{h,m}","YTYCoreFramework/Core/*.{h,m}","YTYCoreFramework/Catorgory/*.{h,m}"
 #   spec.public_header_files = "YTYCoreFramework/Core/*.h","YTYCoreFramework/Catorgory/*.h"
-     spec.source_files = "YTYCoreFramework/YTYConfigure.h","YTYCoreFramework/YTYCoreFramework.h"
+    spec.source_files = "YTYCoreFramework/YTYConfigure.h","YTYCoreFramework/YTYCoreFramework.h"
    # "YTYCoreFramework/Core/*.{h,m}" 
    # "YTYCoreFramework/Catorgory/*.{h,m}"
      
   spec.subspec 'Catorgory' do |ss|
-    ss.source_files = "YTYCoreFramework/*.{h}","YTYCoreFramework/YTYConfigure.h","YTYCoreFramework/Catorgory/*.{h,m}"
+    ss.source_files = "YTYCoreFramework/Catorgory/*.{h,m}"
     ss.frameworks = 'Foundation','UIKit'
+    ss.dependency "MBProgressHUD", "~>1.2.0"
   end 
   
 
  spec.subspec 'Core' do |ss|  
-     ss.source_files = "YTYCoreFramework/*.{h}","YTYCoreFramework/YTYConfigure.h","YTYCoreFramework/Core/{*.h,*.m}"  
+     ss.source_files = "YTYCoreFramework/*.h","YTYCoreFramework/Core/{*.h,*.m}"  
      ss.frameworks = 'Foundation','UIKit' 
      ss.dependency 'YTYCoreFramework/Catorgory'
  end
@@ -55,21 +56,5 @@ Pod::Spec.new do |spec|
   spec.dependency "YYCache", "~>1.0.4"
   spec.dependency "MJRefresh", "~>3.1.12"
   spec.dependency "MBProgressHUD", "~>1.2.0"
-
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
-
-  #spec.source       = { :git => "http://EXAMPLE/YTYCoreFramework.git", :tag => "#{spec.version}" }
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
 
  end

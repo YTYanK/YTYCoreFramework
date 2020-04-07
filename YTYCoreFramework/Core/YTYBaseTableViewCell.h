@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YTYConfigure.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
-
-
 
 @interface YTYBaseTableViewCell : UITableViewCell
 

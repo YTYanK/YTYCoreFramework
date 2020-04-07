@@ -7,8 +7,6 @@
 //
 
 #import "YTYBaseViewController.h"
-//#import <UIView+RGSize.h> //--没有用。。
-#import "UIView+RGSize.h"
 @interface YTYBaseViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
