@@ -1,13 +1,14 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.0.9"
-  spec.summary      = "删除多余属性，修改YTYTools"
+  spec.version      = "0.1.0"
+  spec.summary      = "重构Core、Catorgory内容，并且完善方法"
   spec.description  = <<-DESC
-  发布构建框架
+  构建框架
   1.构建的框架分成两个部分Core、Catorgory
-  2.核心文件除勒YTYTools、YTYRequest,其余文件直接继承重写方法
+  2.核心除了YTYTools（工具）、YTYRequest,其余文件直接继承重写方法
   3.Catorgory 是扩展的辅助功能
+  4.YTYConfigure.h 文件是宏定义文件，核心通用方法都在里面 
   DESC
   
   spec.homepage     = "https://github.com/YTYanK/YTYCoreFramework.git"
@@ -18,8 +19,7 @@ Pod::Spec.new do |spec|
 #   spec.source_files = "YTYCoreFramework","YTYCoreFramework/*.{h,m}","YTYCoreFramework/Core/*.{h,m}","YTYCoreFramework/Catorgory/*.{h,m}"
 #   spec.public_header_files = "YTYCoreFramework/Core/*.h","YTYCoreFramework/Catorgory/*.h"
     spec.source_files = "YTYCoreFramework/YTYConfigure.h","YTYCoreFramework/YTYCoreFramework.h"
-   # "YTYCoreFramework/Core/*.{h,m}" 
-   # "YTYCoreFramework/Catorgory/*.{h,m}"
+    #,"YTYCoreFramework/Core/YTYCore.h","YTYCoreFramework/Core/UIKit+YTYCatorgory.h"
      
   spec.subspec 'Catorgory' do |ss|
     ss.source_files = "YTYCoreFramework/Catorgory/*.{h,m}"
