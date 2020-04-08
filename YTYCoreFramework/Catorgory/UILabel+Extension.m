@@ -87,4 +87,14 @@
 }
 
 
+- (void)setMutableAttributes:(nonnull NSDictionary<NSAttributedStringKey,id> *)attriuted {
+    NSMutableAttributedString * mutStr = [[NSMutableAttributedString alloc] initWithString:self.text];
+    [mutStr addAttributes:attriuted range:NSMakeRange(0, [self.text  length])];
+    self.attributedText = mutStr;
+      
+}
+
+
+
+
 @end
