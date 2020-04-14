@@ -36,7 +36,7 @@ typedef void(^BaseUpdateData)(id vc);
  *     默认 Cell 高度 = 120， 数量 1个
  */
 @property (nonatomic, strong) UITableView *baseTableView;
-/// 是否自定义 Table 布局, 需要自定义时，记得设置 true  默认 false
+/// 是否自定义 Table 布局, 需要自定义时，记得设置 true  默认 false, 并且需要使用 addSubview 到主页面
 @property (assign, nonatomic) BOOL isCustomTable;
 /// 自带的 Cell 对象， 如果没有 baseTableView 实例对象 时， cell = nil;
 @property (strong, nonatomic) YTYBaseTableViewCell *baseCell;
