@@ -47,8 +47,16 @@
     return cell;
 }
 
-/// 用于语音切换
+// 用于语言切换
 - (void)cellUpdateLanguage {}
+
+//  更新 frame
+- (void)setFrame:(CGRect)frame {
+    if(self.additionalFrameBlock != nil) {
+       self.additionalFrameBlock(frame);
+    }
+    [super setFrame:frame];
+}
 
 
 @end

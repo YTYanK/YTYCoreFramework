@@ -31,6 +31,7 @@ Pod::Spec.new do |spec|
 
  spec.subspec 'Core' do |ss|  
      ss.source_files = "YTYCoreFramework/*.h","YTYCoreFramework/Core/{*.h,*.m}"  
+     ss.public_header_files = "YTYCoreFramework/*.h","YTYCoreFramework/Core/*.h"
      ss.frameworks = 'Foundation','UIKit' 
      ss.dependency 'YTYCoreFramework/Catorgory'
  end

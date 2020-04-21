@@ -19,6 +19,7 @@
 #import "UIImage+Extension.h"
 #import "NSString+Extension.h"
 #import "UILabel+Extension.h"
+#import "UIView+YTYBorderLine.h"
 
 #endif /* UIKit_YTYCatorgory_h */
 

@@ -25,8 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface YTYBaseViewController : UIViewController
-
-typedef void(^CellAdditionalBlock)(UITableViewCell * cell);
+typedef void(^CellAdditionalBlock)(UITableViewCell * cell, NSIndexPath *indexPath);
 typedef void(^BaseUpdateData)(id vc);
 
 //@property (nonatomic, weak) id <YTYBaseViewControllerDelegate> baseDelegate;

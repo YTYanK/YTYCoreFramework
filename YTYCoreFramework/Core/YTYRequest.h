@@ -29,7 +29,7 @@ yty_for_interface(YTYRequest)
 /**
  * @brief 全局请求方法
  *
- *    none
+ *  none
  */
 + (void)requestWithUrl:(NSString *)url requestWithParameters:(NSDictionary *)par method:(NetMethod)met returnSuccess:(void(^)(id objs, int status, NSString *mag))success returnError:(void(^)(NSString *err))err;
 

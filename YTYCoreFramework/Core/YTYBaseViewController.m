@@ -117,7 +117,7 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
         一般用于纯代码操作，或者进行Cell 的内容更新
      */
     if(self.additionalBlock != nil) {
-        self.additionalBlock(self.baseCell);
+        self.additionalBlock(self.baseCell,indexPath);
     }
     return self.baseCell;
 }
