@@ -42,6 +42,7 @@
 //            NSLog(@"--%@",nibPath);
             cell =[[YTYBaseTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"defaultCell"];
         }
+        
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;//取消点击效果
     return cell;

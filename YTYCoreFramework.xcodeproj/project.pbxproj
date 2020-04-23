@@ -15,6 +15,16 @@
 		3C8A9128243C154300D99D4B /* UIKit+YTYCatorgory.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8A9127243C154300D99D4B /* UIKit+YTYCatorgory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C8A917B244EDA7C00D99D4B /* UIView+YTYBorderLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8A9179244EDA7C00D99D4B /* UIView+YTYBorderLine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C8A917C244EDA7C00D99D4B /* UIView+YTYBorderLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A917A244EDA7C00D99D4B /* UIView+YTYBorderLine.m */; };
+		3C8A91AC245137F600D99D4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A91AB245137F600D99D4B /* AppDelegate.m */; };
+		3C8A91AF245137F600D99D4B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A91AE245137F600D99D4B /* SceneDelegate.m */; };
+		3C8A91B5245137F600D99D4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8A91B3245137F600D99D4B /* Main.storyboard */; };
+		3C8A91B7245137F800D99D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8A91B6245137F800D99D4B /* Assets.xcassets */; };
+		3C8A91BA245137F800D99D4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8A91B8245137F800D99D4B /* LaunchScreen.storyboard */; };
+		3C8A91BD245137F800D99D4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A91BC245137F800D99D4B /* main.m */; };
+		3C8A91C4245138D300D99D4B /* YTYMainLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A91C3245138D300D99D4B /* YTYMainLists.m */; };
+		3C8A91C8245159F000D99D4B /* YTYMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8A91C6245159F000D99D4B /* YTYMainCell.m */; };
+		3C8A91C9245159F000D99D4B /* YTYMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C8A91C7245159F000D99D4B /* YTYMainCell.xib */; };
+		3C8A91CA24516F5F00D99D4B /* YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */; };
 		3CB43B3323FE78F200D50EE0 /* YTYCoreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B2523FE78F200D50EE0 /* YTYCoreFramework.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B4923FE7A1000D50EE0 /* YTYBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3C23FE7A0F00D50EE0 /* YTYBaseNavigationController.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CB43B4A23FE7A1000D50EE0 /* YTYBaseTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB43B3D23FE7A0F00D50EE0 /* YTYBaseTableViewCell.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
@@ -43,6 +53,7 @@
 		3CC8CB5F2412557A00EDEE71 /* YTYRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CC8CB5D2412557A00EDEE71 /* YTYRequest.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		3CC8CB602412557A00EDEE71 /* YTYRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8CB5E2412557A00EDEE71 /* YTYRequest.m */; };
 		B46AF0BBD2D1B2E1A4B79FB6 /* Pods_YTYCoreFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3CD67DD5150BDFD83D2BCC /* Pods_YTYCoreFramework.framework */; };
+		CF407EED17EB830C7AD0BAA2 /* Pods_YTYCoreFrameworkDome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C704EB8EDC391B847D19DF75 /* Pods_YTYCoreFrameworkDome.framework */; };
 		DE771A63243AEB6300FB2136 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE771A62243AEB6300FB2136 /* back@2x.png */; };
 		DE771A66243B460D00FB2136 /* YTYApiBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DE771A64243B460D00FB2136 /* YTYApiBase.m */; };
 		DE771A67243B460D00FB2136 /* YTYApiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DE771A65243B460D00FB2136 /* YTYApiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -58,6 +69,21 @@
 		3C8A9127243C154300D99D4B /* UIKit+YTYCatorgory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKit+YTYCatorgory.h"; sourceTree = "<group>"; };
 		3C8A9179244EDA7C00D99D4B /* UIView+YTYBorderLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YTYBorderLine.h"; sourceTree = "<group>"; };
 		3C8A917A244EDA7C00D99D4B /* UIView+YTYBorderLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YTYBorderLine.m"; sourceTree = "<group>"; };
+		3C8A91A8245137F600D99D4B /* YTYCoreFrameworkDome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTYCoreFrameworkDome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C8A91AA245137F600D99D4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3C8A91AB245137F600D99D4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3C8A91AD245137F600D99D4B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		3C8A91AE245137F600D99D4B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		3C8A91B4245137F600D99D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C8A91B6245137F800D99D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C8A91B9245137F800D99D4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C8A91BB245137F800D99D4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C8A91BC245137F800D99D4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3C8A91C2245138D300D99D4B /* YTYMainLists.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTYMainLists.h; sourceTree = "<group>"; };
+		3C8A91C3245138D300D99D4B /* YTYMainLists.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTYMainLists.m; sourceTree = "<group>"; };
+		3C8A91C5245159F000D99D4B /* YTYMainCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTYMainCell.h; sourceTree = "<group>"; };
+		3C8A91C6245159F000D99D4B /* YTYMainCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTYMainCell.m; sourceTree = "<group>"; };
+		3C8A91C7245159F000D99D4B /* YTYMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YTYMainCell.xib; sourceTree = "<group>"; };
 		3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YTYCoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB43B2523FE78F200D50EE0 /* YTYCoreFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTYCoreFramework.h; sourceTree = "<group>"; };
 		3CB43B2623FE78F200D50EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,14 +113,26 @@
 		3CB9100C24332B3700819C3B /* UIView+RGSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RGSize.h"; sourceTree = "<group>"; };
 		3CC8CB5D2412557A00EDEE71 /* YTYRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YTYRequest.h; sourceTree = "<group>"; };
 		3CC8CB5E2412557A00EDEE71 /* YTYRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YTYRequest.m; sourceTree = "<group>"; };
+		6DDBC9058B733983A54E3D0D /* Pods-YTYCoreFrameworkDome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFrameworkDome.debug.xcconfig"; path = "Target Support Files/Pods-YTYCoreFrameworkDome/Pods-YTYCoreFrameworkDome.debug.xcconfig"; sourceTree = "<group>"; };
 		9D3CD67DD5150BDFD83D2BCC /* Pods_YTYCoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTYCoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C704EB8EDC391B847D19DF75 /* Pods_YTYCoreFrameworkDome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YTYCoreFrameworkDome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE771A62243AEB6300FB2136 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "YTYCoreFramework/back@2x.png"; sourceTree = SOURCE_ROOT; };
 		DE771A64243B460D00FB2136 /* YTYApiBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTYApiBase.m; sourceTree = "<group>"; };
 		DE771A65243B460D00FB2136 /* YTYApiBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTYApiBase.h; sourceTree = "<group>"; };
 		E58146BD9F78E1A3F2AE7E4C /* Pods-YTYCoreFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFramework.release.xcconfig"; path = "Target Support Files/Pods-YTYCoreFramework/Pods-YTYCoreFramework.release.xcconfig"; sourceTree = "<group>"; };
+		F1E97ED94BED2E21578BADFC /* Pods-YTYCoreFrameworkDome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFrameworkDome.release.xcconfig"; path = "Target Support Files/Pods-YTYCoreFrameworkDome/Pods-YTYCoreFrameworkDome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3C8A91A5245137F600D99D4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8A91CA24516F5F00D99D4B /* YTYCoreFramework.framework in Frameworks */,
+				CF407EED17EB830C7AD0BAA2 /* Pods_YTYCoreFrameworkDome.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CB43B1F23FE78F200D50EE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,14 +149,38 @@
 			children = (
 				3483B326386D821C942D2863 /* Pods-YTYCoreFramework.debug.xcconfig */,
 				E58146BD9F78E1A3F2AE7E4C /* Pods-YTYCoreFramework.release.xcconfig */,
+				6DDBC9058B733983A54E3D0D /* Pods-YTYCoreFrameworkDome.debug.xcconfig */,
+				F1E97ED94BED2E21578BADFC /* Pods-YTYCoreFrameworkDome.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3C8A91A9245137F600D99D4B /* YTYCoreFrameworkDome */ = {
+			isa = PBXGroup;
+			children = (
+				3C8A91AA245137F600D99D4B /* AppDelegate.h */,
+				3C8A91AB245137F600D99D4B /* AppDelegate.m */,
+				3C8A91AD245137F600D99D4B /* SceneDelegate.h */,
+				3C8A91AE245137F600D99D4B /* SceneDelegate.m */,
+				3C8A91B3245137F600D99D4B /* Main.storyboard */,
+				3C8A91B6245137F800D99D4B /* Assets.xcassets */,
+				3C8A91B8245137F800D99D4B /* LaunchScreen.storyboard */,
+				3C8A91BB245137F800D99D4B /* Info.plist */,
+				3C8A91BC245137F800D99D4B /* main.m */,
+				3C8A91C2245138D300D99D4B /* YTYMainLists.h */,
+				3C8A91C3245138D300D99D4B /* YTYMainLists.m */,
+				3C8A91C5245159F000D99D4B /* YTYMainCell.h */,
+				3C8A91C6245159F000D99D4B /* YTYMainCell.m */,
+				3C8A91C7245159F000D99D4B /* YTYMainCell.xib */,
+			);
+			path = YTYCoreFrameworkDome;
 			sourceTree = "<group>";
 		};
 		3CB43B1823FE78F200D50EE0 = {
 			isa = PBXGroup;
 			children = (
 				3CB43B2423FE78F200D50EE0 /* YTYCoreFramework */,
+				3C8A91A9245137F600D99D4B /* YTYCoreFrameworkDome */,
 				3CB43B2323FE78F200D50EE0 /* Products */,
 				3CB43BD023FE8D0300D50EE0 /* Frameworks */,
 				01F11FDB0195DD5D909E00B6 /* Pods */,
@@ -129,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				3CB43B2223FE78F200D50EE0 /* YTYCoreFramework.framework */,
+				3C8A91A8245137F600D99D4B /* YTYCoreFrameworkDome.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				9D3CD67DD5150BDFD83D2BCC /* Pods_YTYCoreFramework.framework */,
+				C704EB8EDC391B847D19DF75 /* Pods_YTYCoreFrameworkDome.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,6 +300,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3C8A91A7245137F600D99D4B /* YTYCoreFrameworkDome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C8A91C0245137F800D99D4B /* Build configuration list for PBXNativeTarget "YTYCoreFrameworkDome" */;
+			buildPhases = (
+				5B5F12AC10CFCF6F8E8229E2 /* [CP] Check Pods Manifest.lock */,
+				3C8A91A4245137F600D99D4B /* Sources */,
+				3C8A91A5245137F600D99D4B /* Frameworks */,
+				3C8A91A6245137F600D99D4B /* Resources */,
+				19CF5807056BC83CCA6442F9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YTYCoreFrameworkDome;
+			productName = YTYCoreFrameworkDome;
+			productReference = 3C8A91A8245137F600D99D4B /* YTYCoreFrameworkDome.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3CB43B2123FE78F200D50EE0 /* YTYCoreFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CB43B3623FE78F200D50EE0 /* Build configuration list for PBXNativeTarget "YTYCoreFramework" */;
@@ -264,6 +347,9 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = YTYanK;
 				TargetAttributes = {
+					3C8A91A7245137F600D99D4B = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					3CB43B2123FE78F200D50EE0 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -283,11 +369,23 @@
 			projectRoot = "";
 			targets = (
 				3CB43B2123FE78F200D50EE0 /* YTYCoreFramework */,
+				3C8A91A7245137F600D99D4B /* YTYCoreFrameworkDome */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3C8A91A6245137F600D99D4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8A91BA245137F800D99D4B /* LaunchScreen.storyboard in Resources */,
+				3C8A91B7245137F800D99D4B /* Assets.xcassets in Resources */,
+				3C8A91B5245137F600D99D4B /* Main.storyboard in Resources */,
+				3C8A91C9245159F000D99D4B /* YTYMainCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CB43B2023FE78F200D50EE0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +398,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		19CF5807056BC83CCA6442F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YTYCoreFrameworkDome/Pods-YTYCoreFrameworkDome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YTYCoreFrameworkDome/Pods-YTYCoreFrameworkDome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YTYCoreFrameworkDome/Pods-YTYCoreFrameworkDome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B5F12AC10CFCF6F8E8229E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YTYCoreFrameworkDome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EBB8F1E3A890621F4AA77851 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -325,6 +462,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3C8A91A4245137F600D99D4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8A91AC245137F600D99D4B /* AppDelegate.m in Sources */,
+				3C8A91C8245159F000D99D4B /* YTYMainCell.m in Sources */,
+				3C8A91BD245137F800D99D4B /* main.m in Sources */,
+				3C8A91C4245138D300D99D4B /* YTYMainLists.m in Sources */,
+				3C8A91AF245137F600D99D4B /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CB43B1E23FE78F200D50EE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,7 +499,64 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		3C8A91B3245137F600D99D4B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C8A91B4245137F600D99D4B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C8A91B8245137F800D99D4B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C8A91B9245137F800D99D4B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		3C8A91BE245137F800D99D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DDBC9058B733983A54E3D0D /* Pods-YTYCoreFrameworkDome.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UCREBK6TA;
+				INFOPLIST_FILE = YTYCoreFrameworkDome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YTYanK.YTYCoreFrameworkDome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3C8A91BF245137F800D99D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1E97ED94BED2E21578BADFC /* Pods-YTYCoreFrameworkDome.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4UCREBK6TA;
+				INFOPLIST_FILE = YTYCoreFrameworkDome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YTYanK.YTYCoreFrameworkDome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		3CB43B3423FE78F200D50EE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -548,6 +754,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3C8A91C0245137F800D99D4B /* Build configuration list for PBXNativeTarget "YTYCoreFrameworkDome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C8A91BE245137F800D99D4B /* Debug */,
+				3C8A91BF245137F800D99D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3CB43B1C23FE78F200D50EE0 /* Build configuration list for PBXProject "YTYCoreFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

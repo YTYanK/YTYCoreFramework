@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface YTYBaseViewController : UIViewController
+/// cell 额外扩展
 typedef void(^CellAdditionalBlock)(UITableViewCell * cell, NSIndexPath *indexPath);
 typedef void(^BaseUpdateData)(id vc);
 

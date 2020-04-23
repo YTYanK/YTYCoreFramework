@@ -110,8 +110,8 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
     return 120;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.baseCell = [YTYBaseTableViewCell initCellWithCellView:tableView reuseIdentifier:cellIdentifier];
-    self.baseCell.nestingTableView = self.baseTableView;
+     self.baseCell = [YTYBaseTableViewCell initCellWithCellView:tableView reuseIdentifier:cellIdentifier];
+     self.baseCell.nestingTableView = self.baseTableView;
     /**
          添加 Cell 内容，通过“additionlBlock ” 属性返回，进行添加样式操作
         一般用于纯代码操作，或者进行Cell 的内容更新

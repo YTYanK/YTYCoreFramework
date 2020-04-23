@@ -11,9 +11,7 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
-
 typedef void(^CellAdditionalFrameBlock)(CGRect frame);
-
 @interface YTYBaseTableViewCell : UITableViewCell
 
 
@@ -36,6 +34,7 @@ typedef void(^CellAdditionalFrameBlock)(CGRect frame);
 + (instancetype)initCellWithCellView:(UITableView *)tableView reuseIdentifier:(NSString *)identifier;
 
 - (void)cellUpdateLanguage;
+
 
 
 @end
