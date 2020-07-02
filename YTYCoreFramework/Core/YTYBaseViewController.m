@@ -39,7 +39,7 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 // 会先加载父类 viewDidLoad ， 再加载子类 viewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"查看%s",__func__);
+    // NSLog(@"查看%s",__func__);
     // Do any additional setup after loading the view.
     // 加载视图后执行任何其他设置
 }
@@ -47,7 +47,7 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"查看%@", [UINavigationBar appearance]);
+    // NSLog(@"查看%@", [UINavigationBar appearance]);
 }
 
 - (void)initConfigure {

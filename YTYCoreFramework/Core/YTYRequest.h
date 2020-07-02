@@ -17,12 +17,27 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YTYRequest : NSObject
+
+/**
+ *  网络状态
+    NetObtainDataStatusUnknownAlsoFail      = -2,  //  -失败
+    NetObtainDataStatusFail                 = -1,  // 失败
+    NetObtainDataStatusError                = 0,   // error
+    NetObtainDataStatusSuccess              = 1,   // 成功
+    NetObtainDataStatusSuccessAlsoNotData   = 2,   // 成功 -无数据
+ 
+ */
 @property (assign, nonatomic) NetObtainDataStatus obtainStatus;
+
+/**
+ * ge / post
+ */
 @property (assign, nonatomic) NetMethod method;
+/// 网络请求对象
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
 @property (strong, nonatomic, nonnull) AFHTTPRequestSerializer * rSerializer;
-//@property (strong, nonatomic) AFHTTPRequestSerializer * _Nonnull rSerializer;
-@property (strong, nonatomic) YTYErrorBlock errorBlock;
+///  403 - 无权限状态下回调
+@property (strong, nonatomic) YTYFailureBlock authorityFailBlock;
 
 yty_for_interface(YTYRequest)
 

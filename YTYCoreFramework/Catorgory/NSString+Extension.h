@@ -12,14 +12,23 @@
 
 
 @interface NSString (Extension)
+
+
+///MARK: - 正则判断部分
 /// 数字验证
 - (BOOL)isNumber;
+/// 简单-手机号码格式验证
+- (BOOL)isMobilePhoneNum;
+/// 严格- 手机号码格式验证
+- (BOOL)isTelphoneNumber;
 /// 香港手机号验证
 - (BOOL)isPhoneHongKongNumber;
 /// 电子邮箱格式验证
 - (BOOL)isEmailFormat;
 
 
+
+///MARK: - 字符串判断部分
 /**
   获取日期 判断 星期
   @param dateStr  日期字符串

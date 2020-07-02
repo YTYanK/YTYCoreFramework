@@ -33,7 +33,7 @@ yty_for_implementation(YTYRequest)
         
         if (status == AFNetworkReachabilityStatusNotReachable  || status == AFNetworkReachabilityStatusUnknown) {
             // 網絡不可用
-//             NSString *requestStr = @"";
+            // NSString *requestStr = @"";
              [UIApplication sharedApplication].networkActivityIndicatorVisible  = NO;
              err(@"网络不可用，请您检查网络");
         }else{
@@ -101,7 +101,6 @@ yty_for_implementation(YTYRequest)
     
     //如果检查到为空做登出
     if ([jsonStr isEqual:[NSNull null]] || jsonStr == nil) {
-//         requestStr = @"账户异常，请重新登录!";
          requestStr = @"jsonStr null / 数据返回有问题， 请查看数据";
          block(nil,NetObtainDataStatusError, requestStr);  //遇到错误
     }
@@ -145,7 +144,9 @@ yty_for_implementation(YTYRequest)
             }else if ([codeStr isEqualToString:@"403"]){
                 // 退出登陆
                 requestStr = @"账户异常，请重新登录!";
-//                block(nil,NetObtainDataStatusUnknownAlsoFail, requestStr);
+                if ([YTYRequest sharedYTYRequest].authorityFailBlock != nil) {
+                    [YTYRequest sharedYTYRequest].authorityFailBlock(requestStr);
+                }
                 return;
                 //提示
             }else if([codeStr isEqualToString:@"500"]){

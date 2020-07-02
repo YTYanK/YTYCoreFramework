@@ -38,14 +38,14 @@ NS_ASSUME_NONNULL_BEGIN
 yty_for_interface(YTYApiBase)
 
 /**
- *  不返回错误，统一数据接口返回
- *  需要继承类重写
+ *  不返回错误，统一数据接口返回 - 【可弃用】
+ *  *需要继承类重写
  */
-+ (void)requestWithUrl:(AUString)api parameters:(NSDictionary *)dic method:(NetMethod)met returnModel:(void(^)(id model))block;
++ (void)requestWithUrl:(AUString)api parameters:(NSDictionary *)dic method:(NetMethod)met returnModel:(void(^)(id model))block DEPRECATED_MSG_ATTRIBUTE("Please use [requestWithUrl: parameters:method:returnModel:returnError:]");
 
 /**
  *  会返回错误， 统一数据接口返回
- *  需要继承类重写
+ *  *需要继承类重写
  */
 + (void)requestWithUrl:(AUString)api parameters:(NSDictionary *)dic method:(NetMethod)met returnModel:(void(^)(id model))block returnError:(void(^)(id error))errBlock;
 

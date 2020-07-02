@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UIColor * bgColor;
 ///
 @property (strong, nonatomic) NSFont *  titleFont;
-/// 返回字 颜色
+/// 返回 字颜色
 @property (strong, nonatomic) UIColor * titleColor;
 /// 背景图片
 @property (strong, nonatomic) UIImage * bgImage;
