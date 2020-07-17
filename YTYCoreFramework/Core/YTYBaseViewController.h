@@ -42,18 +42,13 @@ typedef void(^BaseUpdateData)(id vc);
 @property (strong, nonatomic) YTYBaseTableViewCell *baseCell;
 /// 页数
 @property (nonatomic, assign) int page;
-/// 导航栏颜色
-//@property (strong, nonatomic) UIColor * baseNavBarBgColor;
-//@property (strong, nonatomic) NSFont * baseTitleFont;
-//@property (strong, nonatomic) UIImage * baseImage;
-//@property (assign, nonatomic) BOOL isShowNavigation;
-//@property (strong, nonatomic) UINavigationController * baseNC;
+
 
 
 
 
 /**
-  更新操作
+  更新操作 - 需要把繼承對象進行 傳入 即可在 初始化該對象之後調用
   例子：
   - (void)viewWillAppear:(BOOL)animated {
       [super viewWillAppear:animated];
@@ -67,6 +62,8 @@ typedef void(^BaseUpdateData)(id vc);
  *   更新操作 Cell 内部组件、或者手动添加组件
  *   添加 Cell 外部添加样式 操作
  *   注意  ( 如果重写 - tableView: cellForRowAtIndexPath: 方法， additionalBlock 不会执行)
+ *    ⚠️該方適用 父類 YTYBaseViewController 的 baseTableView 對象
+ *        ⚠️ 如需非 baseTableView 對象 調用方法請看demo案例
  */
 @property (strong, nonatomic) CellAdditionalBlock  additionalBlock;
 
@@ -76,9 +73,6 @@ typedef void(^BaseUpdateData)(id vc);
 ///  加载对象
 @property (strong, nonatomic) MJRefreshBackNormalFooter * footer;
 
-//- (init)initNavigaionAddVC:(UIViewController *)vc;
-////- (instancetype)initWithNibName:(nullable NSString *)nibNameOrNil bundle:(nullable NSBundle *)nibBundleOrNil
-//- (instancetype)initNavigaionWithViewController:(nonnull UIViewController *)viewController;
 
 
 @end

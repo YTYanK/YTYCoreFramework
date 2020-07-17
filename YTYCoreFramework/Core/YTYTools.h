@@ -67,6 +67,17 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIBarButtonItem *)obtainItemWithCustomView:(nullable UIView *)customView;
 
 
+/**
+ * 将数组拆分成固定长度 -后面抽离
+ *  @param array  数组对象
+ *   @param subSize  每组大小
+ * @return NSMutableArray 拆分完的对象数组。
+*/
++ (NSMutableArray *)splitArray: (NSArray *)array withSubSize : (int)subSize;
+
+
+/// 颜色转换：iOS中（以#开头）十六进制的颜色转换为UIColor(RGB)
++ (UIColor *) colorWithHexString: (NSString *)color;
 @end
 
 NS_ASSUME_NONNULL_END

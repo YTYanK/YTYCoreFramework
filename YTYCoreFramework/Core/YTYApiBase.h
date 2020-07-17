@@ -12,14 +12,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-//// Test
-//#define IPHEAD_TEST @""
-//// Release
-//#define IPHEAD_RELE @""
-//// Development
-//#define IPHEAD_DEVE @""
-
 // Test
 #define YTY_TEST @"Test"
 // Release
@@ -28,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define YTY_DEVE @"Development"
 
 #define YTY_SET_NSUD(VALUE, KEY) [NSUD setValue:VALUE forKey:KEY];
-//#define YTAY_GET_NSUD(KEY) [NSUD get]
+
 
 
 /**

@@ -13,7 +13,7 @@
 yty_for_implementation(YTYApiBase)
 
 /**
- *  不返回错误，统一数据接口返回
+ *  不返回错误，统一数据接口返回 - 【可弃用】
  */
 + (void)requestWithUrl:(AUString)api parameters:(NSDictionary *)dic method:(NetMethod)met returnModel:(void(^)(id model))block {
    

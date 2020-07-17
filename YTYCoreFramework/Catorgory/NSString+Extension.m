@@ -96,6 +96,50 @@
     NSPredicate*emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
 }
+/**
+  判断字符串中是否包含非法字符
+*/
+- (BOOL)isHasIllegal {
+    // 特殊字符
+    NSString *str =@"^[A-Za-z0-9\\u4e00-\u9fa5]+$";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", str];
+    if (![emailTest evaluateWithObject:self]) {
+       return YES;
+    }
+    return NO;
+}
+
+//< 是否为空或者是空格
+- (BOOL)isEmpty {
+
+    
+    NSString * newSelf = [self stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if(nil == self
+       || self.length ==0
+       || [self isEqualToString:@""]
+       || [self isEqualToString:@"<null>"]
+       || [self isEqualToString:@"(null)"]
+       || [self isEqualToString:@"null"]
+       || newSelf.length ==0
+       || [newSelf isEqualToString:@""]
+       || [newSelf isEqualToString:@"<null>"]
+       || [newSelf isEqualToString:@"(null)"]
+       || [newSelf isEqualToString:@"null"]
+       || [self isKindOfClass:[NSNull class]] ){
+        
+        return YES;
+        
+    }else{
+        // <object returned empty description> 会来这里
+        NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+        NSString *trimedString = [self stringByTrimmingCharactersInSet:set];
+        return [trimedString isEqualToString: @""];
+    }
+    
+    return NO;
+}
+
+
 
 // 星期判断
 + (NSString *)whichWeek:(NSString *)dateStr {
@@ -135,6 +179,90 @@
             break;
     }
 }
+// 計算字符串大小
++ (CGSize) calculateStringHeightWithFont:(UIFont *)font TextRect:(CGSize)size  string:(NSString *)content {
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;
+    NSDictionary * attributes = @{
+                                  NSFontAttributeName:font,
+                                  NSParagraphStyleAttributeName: paragraphStyle
+                                  };
+    CGSize textRect =  size; //CGSizeMake([UIScreen mainScreen].bounds.size.width - 30, MAXFLOAT);
+    CGSize s = [content boundingRectWithSize:textRect
+       options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+    attributes:attributes
+                                        context:nil].size;
+    
+//    CGFloat textHeight = [content boundingRectWithSize:textRect
+//                                           options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
+//                                        attributes:attributes
+//                                           context:nil].size.height;
+    return s;
+}
 
+// 字典或数组 转字符串json   parseTo
++ (NSString *)calculateJsonStringFromObject:(id)obj {
+    
+    if ([obj isKindOfClass:[NSArray class]] || [obj isKindOfClass:[NSDictionary class]]) {
+       NSData *data=[NSJSONSerialization dataWithJSONObject:obj options:NSJSONWritingPrettyPrinted error:nil];
+        NSString *jsonStr = [[NSString  alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        return jsonStr;
+    }else {
+        return  @"";
+    }
+}
+
+// jsonString ->  数组/字典
++ (id)parseJSONStringToNSDictionary:(NSString *)JSONString {
+
+    NSData *JSONData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
+
+    NSError *error = nil;
+
+    id jsonObject = [NSJSONSerialization
+
+    JSONObjectWithData:JSONData options:NSJSONReadingAllowFragments
+
+    error:&error];
+
+    if (jsonObject != nil && error == nil){
+
+    NSLog(@"反序列化成功...");
+
+    if ([jsonObject isKindOfClass:[NSDictionary class]]){
+
+    NSDictionary *deserializedDictionary = (NSDictionary *)jsonObject;
+
+    NSLog(@"反序列化后的dictionary数据 = %@", deserializedDictionary);
+
+    return deserializedDictionary;
+
+    }
+
+    else if ([jsonObject isKindOfClass:[NSArray class]]){
+
+    NSArray *deserializedArray = (NSArray *)jsonObject;
+
+    NSLog(@"反序列化json后的数组 = %@", deserializedArray);
+
+    return deserializedArray;
+
+    }else {
+
+    return nil;
+
+    }
+
+    }else{
+
+    NSLog(@"%@", error);
+
+    NSLog(@"反序列化时发生一个错误");
+
+    return nil;
+
+    }
+
+}
 
 @end

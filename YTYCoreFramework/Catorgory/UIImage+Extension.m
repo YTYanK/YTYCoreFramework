@@ -89,36 +89,23 @@
 }
 
 
-/// Base64图片 -> UIImage
-+ (UIImage *)dataURL2Image: (NSString *)imgSrc
-{
-    NSURL *url = [NSURL URLWithString: imgSrc];
-    NSData *base64Data = [NSData dataWithContentsOfURL: url];
-    
-    // Base64形式的NSData解密成普通字符串
-    NSData *data = [[NSData alloc] initWithBase64EncodedData:base64Data options:NSDataBase64DecodingIgnoreUnknownCharacters];
-   //字符串
-   // NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    UIImage *image = [UIImage imageWithData: data];
-    
-    return image;
-}
 
 
-- (BOOL) imageHasAlpha: (UIImage *) image
-{
+// 判斷圖片類型 "image/png“ or "image/jpeg"
++ (BOOL)imageHasAlpha: (UIImage *) image {
     CGImageAlphaInfo alpha = CGImageGetAlphaInfo(image.CGImage);
     return (alpha == kCGImageAlphaFirst ||
             alpha == kCGImageAlphaLast ||
             alpha == kCGImageAlphaPremultipliedFirst ||
             alpha == kCGImageAlphaPremultipliedLast);
 }
-/// UIImage -> Base64图片
-- (NSString *)image2DataURL: (UIImage *) image {
+
+// UIImage -> Base64字符串 附帶類型 “data:  ——;base64,  ——”
++ (NSString *)conversionBase64AttachTypeFromImage:(UIImage *)image {
     NSData *imageData = nil;
     NSString *mimeType = nil;
     
-    if ([self imageHasAlpha: image]) {
+    if ([UIImage imageHasAlpha: image]) {
         imageData = UIImagePNGRepresentation(image);
         mimeType = @"image/png";
     } else {
@@ -130,6 +117,39 @@
             [imageData base64EncodedStringWithOptions: 0]];
     
 }
+// UIImage -> Base64字符串
++ (NSString *)conversionBase64FromImage:(UIImage *)image {
+    NSData *_data = UIImageJPEGRepresentation(image, 1.0f);
+       NSData *base64Data = [_data base64EncodedDataWithOptions:0];
+       NSString *b64 = [[NSString alloc]initWithData:base64Data encoding:NSUTF8StringEncoding];
+       return b64;
+}
+//  圖片url字符串 -> UIImage
++ (UIImage *)conversionImageFromImageUrl: (NSString *)imgSrc {
+    NSURL *url = [NSURL URLWithString: imgSrc];
+    NSData *base64Data = [NSData dataWithContentsOfURL: url];
+    // Base64形式的NSData解密成普通字符串
+    NSData *data = [[NSData alloc] initWithBase64EncodedData:base64Data options:NSDataBase64DecodingIgnoreUnknownCharacters];
+   //字符串
+   // NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    UIImage *image = [UIImage imageWithData: data];
+    
+    return image;
+}
+// UIImage data -> Base64字符串
++ (NSString *)conversionBase64FromImageData:(NSData *)data {
+    NSData *base64Data = [data base64EncodedDataWithOptions:0];
+    NSString *b64 = [[NSString alloc]initWithData:base64Data encoding:NSUTF8StringEncoding];
+    return b64;
+}
+// base64字符串 -> UIImage图片
++ (UIImage *)conversionImageFromBase64String:(NSString *)b64 {
+    NSData *_data = [[NSData alloc] initWithBase64EncodedString:b64 options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    UIImage *image = [UIImage imageWithData:_data];
+    return  image;
+}
+
+
 
 
 //之后只需要实例化一个CIFilter的对象, 给该对象添加数据后生成二维码即可

@@ -25,8 +25,10 @@
 - (BOOL)isPhoneHongKongNumber;
 /// 电子邮箱格式验证
 - (BOOL)isEmailFormat;
-
-
+/// 判断字符串中是否包含非法字符
+- (BOOL)isHasIllegal;
+///  是否为空或者是空格
+- (BOOL)isEmpty;
 
 ///MARK: - 字符串判断部分
 /**
@@ -35,5 +37,26 @@
  */
 + (NSString *)whichWeek:(NSString *)dateStr;
 
+///MARK: - 字符串功能部分
+
+/**
+ 計算字符串高度
+ @param font  字符串字体
+ @param size 范围大小
+ @param content 内容
+ @return 宽高
+*/
++ (CGSize)calculateStringHeightWithFont:(UIFont *)font TextRect:(CGSize)size  string:(NSString *)content;
+
+/**
+ 字典或数组 转字符串json
+ @param obj  字典对象或数组对象 - 其他对象转换结果为“”
+*/
++ (NSString *)calculateJsonStringFromObject:(id)obj;
+/**
+ 字符串json 转 字典或数组
+ @param JSONString  json 字符串
+*/
++ (id)parseJSONStringToNSDictionary:(NSString *)JSONString;
 @end
 

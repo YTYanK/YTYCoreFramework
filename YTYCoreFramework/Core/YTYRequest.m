@@ -148,7 +148,6 @@ yty_for_implementation(YTYRequest)
                     [YTYRequest sharedYTYRequest].authorityFailBlock(requestStr);
                 }
                 return;
-                //提示
             }else if([codeStr isEqualToString:@"500"]){
                  requestStr = jsonDic[@"msg"];
                  block(nil,NetObtainDataStatusFail, requestStr);

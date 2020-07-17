@@ -22,10 +22,19 @@ typedef NS_ENUM(NSInteger, GradientType) {
 - (UIImage*)imageWithNewColor:(UIColor*)color;
 
 
-/// Base64图片 -> UIImage
-+ (UIImage *)dataURL2Image: (NSString *)imgSrc;
+/// UIImage -> Base64字符串 附帶類型 “data:  ——;base64,  ——”
++ (NSString *)conversionBase64AttachTypeFromImage:(UIImage *)image;
+/// UIImage -> Base64字符串
++ (NSString *)conversionBase64FromImage:(UIImage *)image;
+///  圖片url字符串 -> UIImage
++ (UIImage *)conversionImageFromImageUrl: (NSString *)imgSrc;
+/// UIImage data -> Base64字符串
++ (NSString *)conversionBase64FromImageData:(NSData *)data;
+/// base64字符串 -> UIImage图片
++ (UIImage *)conversionImageFromBase64String:(NSString *)b64;
 
-// 生成二维码
+
+/// 生成二维码
 + (UIImage *)createQRCodeWithData:(NSString *)dataString logoImage:(UIImage *)logoImage imageSize:(CGFloat)size;
 
 /**

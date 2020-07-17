@@ -81,7 +81,7 @@ static NSString *cellIdentifier = @"YTYBaseTableViewCell";
 
 
 
-// 初始化 table
+// 初始化 tableView
 - (void)initTableView:(UITableView *)tableView {
     if (tableView != nil) {
         tableView.delegate = self;
