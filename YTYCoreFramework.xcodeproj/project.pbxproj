@@ -57,6 +57,7 @@
 		DE771A63243AEB6300FB2136 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE771A62243AEB6300FB2136 /* back@2x.png */; };
 		DE771A66243B460D00FB2136 /* YTYApiBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DE771A64243B460D00FB2136 /* YTYApiBase.m */; };
 		DE771A67243B460D00FB2136 /* YTYApiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DE771A65243B460D00FB2136 /* YTYApiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEF3578B24E827F200DC00E2 /* Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3578A24E827F200DC00E2 /* Test1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,8 @@
 		DE771A62243AEB6300FB2136 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "YTYCoreFramework/back@2x.png"; sourceTree = SOURCE_ROOT; };
 		DE771A64243B460D00FB2136 /* YTYApiBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTYApiBase.m; sourceTree = "<group>"; };
 		DE771A65243B460D00FB2136 /* YTYApiBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTYApiBase.h; sourceTree = "<group>"; };
+		DEF3578924E827F200DC00E2 /* Test1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1.h; sourceTree = "<group>"; };
+		DEF3578A24E827F200DC00E2 /* Test1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1.m; sourceTree = "<group>"; };
 		E58146BD9F78E1A3F2AE7E4C /* Pods-YTYCoreFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFramework.release.xcconfig"; path = "Target Support Files/Pods-YTYCoreFramework/Pods-YTYCoreFramework.release.xcconfig"; sourceTree = "<group>"; };
 		F1E97ED94BED2E21578BADFC /* Pods-YTYCoreFrameworkDome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFrameworkDome.release.xcconfig"; path = "Target Support Files/Pods-YTYCoreFrameworkDome/Pods-YTYCoreFrameworkDome.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,17 +158,9 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		3C45C2E724C190830034FEA5 /* 案例一 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "案例一";
-			sourceTree = "<group>";
-		};
 		3C8A91A9245137F600D99D4B /* YTYCoreFrameworkDome */ = {
 			isa = PBXGroup;
 			children = (
-				3C45C2E724C190830034FEA5 /* 案例一 */,
 				3C8A91AA245137F600D99D4B /* AppDelegate.h */,
 				3C8A91AB245137F600D99D4B /* AppDelegate.m */,
 				3C8A91AD245137F600D99D4B /* SceneDelegate.h */,
@@ -180,6 +175,8 @@
 				3C8A91C5245159F000D99D4B /* YTYMainCell.h */,
 				3C8A91C6245159F000D99D4B /* YTYMainCell.m */,
 				3C8A91C7245159F000D99D4B /* YTYMainCell.xib */,
+				DEF3578924E827F200DC00E2 /* Test1.h */,
+				DEF3578A24E827F200DC00E2 /* Test1.m */,
 			);
 			path = YTYCoreFrameworkDome;
 			sourceTree = "<group>";
@@ -477,6 +474,7 @@
 				3C8A91AC245137F600D99D4B /* AppDelegate.m in Sources */,
 				3C8A91C8245159F000D99D4B /* YTYMainCell.m in Sources */,
 				3C8A91BD245137F800D99D4B /* main.m in Sources */,
+				DEF3578B24E827F200DC00E2 /* Test1.m in Sources */,
 				3C8A91C4245138D300D99D4B /* YTYMainLists.m in Sources */,
 				3C8A91AF245137F600D99D4B /* SceneDelegate.m in Sources */,
 			);

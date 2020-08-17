@@ -8,6 +8,7 @@
 
 #import "YTYMainLists.h"
 #import "YTYMainCell.h"
+#import "Test1.h"
 
 @interface YTYMainLists ()
 
@@ -90,6 +91,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"--->>%ld",(long)indexPath.row);
+    Test1 *testVc = [[Test1 alloc] init];
+    [self.navigationController pushViewController:testVc animated:YES];
+    
  }
 
 
