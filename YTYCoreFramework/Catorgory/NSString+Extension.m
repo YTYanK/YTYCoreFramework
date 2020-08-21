@@ -179,6 +179,7 @@
             break;
     }
 }
+
 // 計算字符串大小
 + (CGSize) calculateStringHeightWithFont:(UIFont *)font TextRect:(CGSize)size  string:(NSString *)content {
     NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -193,10 +194,6 @@
     attributes:attributes
                                         context:nil].size;
     
-//    CGFloat textHeight = [content boundingRectWithSize:textRect
-//                                           options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
-//                                        attributes:attributes
-//                                           context:nil].size.height;
     return s;
 }
 

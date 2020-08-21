@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.1.1"
+  spec.version      = "0.1.2"
   spec.summary      = "重构Core、Catorgory内容，并且完善方法"
   spec.description  = <<-DESC
   构建框架
@@ -26,6 +26,7 @@ Pod::Spec.new do |spec|
     ss.public_header_files = "YTYCoreFramework/Catorgory/*.h"
     ss.frameworks = 'Foundation','UIKit'
     ss.dependency "MBProgressHUD", "~>1.2.0"
+    #ss.resource = "YTYCoreFramework/Catorgory/MBProgressHUD.bundle"
   end 
   
 

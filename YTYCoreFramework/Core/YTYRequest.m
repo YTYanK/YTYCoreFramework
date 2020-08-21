@@ -134,7 +134,7 @@ yty_for_implementation(YTYRequest)
                 }
 
                 if(jsonDic[@"data"] == nil || [jsonDic[@"data"] isEqual: [NSNull null]]) {
-                   block(jsonDic,NetObtainDataStatusSuccessAlsoNotData, requestStr);
+                    block(jsonDic,NetObtainDataStatusSuccessAlsoNotData, requestStr);
                      // 是 200 并且数据是空时
                 }else {
                     block(jsonDic[@"data"],NetObtainDataStatusSuccess,requestStr);

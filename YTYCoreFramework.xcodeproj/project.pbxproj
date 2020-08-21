@@ -57,6 +57,8 @@
 		DE771A63243AEB6300FB2136 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE771A62243AEB6300FB2136 /* back@2x.png */; };
 		DE771A66243B460D00FB2136 /* YTYApiBase.m in Sources */ = {isa = PBXBuildFile; fileRef = DE771A64243B460D00FB2136 /* YTYApiBase.m */; };
 		DE771A67243B460D00FB2136 /* YTYApiBase.h in Headers */ = {isa = PBXBuildFile; fileRef = DE771A65243B460D00FB2136 /* YTYApiBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEAA26CD24F08F59006660CA /* UIColor+ColorHexadecimal.m in Sources */ = {isa = PBXBuildFile; fileRef = DEAA26CB24F08F58006660CA /* UIColor+ColorHexadecimal.m */; };
+		DEAA26CE24F08F59006660CA /* UIColor+ColorHexadecimal.h in Headers */ = {isa = PBXBuildFile; fileRef = DEAA26CC24F08F59006660CA /* UIColor+ColorHexadecimal.h */; };
 		DEF3578B24E827F200DC00E2 /* Test1.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF3578A24E827F200DC00E2 /* Test1.m */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +122,8 @@
 		DE771A62243AEB6300FB2136 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "YTYCoreFramework/back@2x.png"; sourceTree = SOURCE_ROOT; };
 		DE771A64243B460D00FB2136 /* YTYApiBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTYApiBase.m; sourceTree = "<group>"; };
 		DE771A65243B460D00FB2136 /* YTYApiBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTYApiBase.h; sourceTree = "<group>"; };
+		DEAA26CB24F08F58006660CA /* UIColor+ColorHexadecimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorHexadecimal.m"; sourceTree = "<group>"; };
+		DEAA26CC24F08F59006660CA /* UIColor+ColorHexadecimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorHexadecimal.h"; sourceTree = "<group>"; };
 		DEF3578924E827F200DC00E2 /* Test1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test1.h; sourceTree = "<group>"; };
 		DEF3578A24E827F200DC00E2 /* Test1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test1.m; sourceTree = "<group>"; };
 		E58146BD9F78E1A3F2AE7E4C /* Pods-YTYCoreFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTYCoreFramework.release.xcconfig"; path = "Target Support Files/Pods-YTYCoreFramework/Pods-YTYCoreFramework.release.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 		3CB90FDB242D92CE00819C3B /* Catorgory */ = {
 			isa = PBXGroup;
 			children = (
+				DEAA26CC24F08F59006660CA /* UIColor+ColorHexadecimal.h */,
+				DEAA26CB24F08F58006660CA /* UIColor+ColorHexadecimal.m */,
 				3C8A9179244EDA7C00D99D4B /* UIView+YTYBorderLine.h */,
 				3C8A917A244EDA7C00D99D4B /* UIView+YTYBorderLine.m */,
 				DE771A62243AEB6300FB2136 /* back@2x.png */,
@@ -298,6 +304,7 @@
 				3C8A9128243C154300D99D4B /* UIKit+YTYCatorgory.h in Headers */,
 				3C8A917B244EDA7C00D99D4B /* UIView+YTYBorderLine.h in Headers */,
 				3C5CAB7924349B0200C68CFB /* YTYConfigure.h in Headers */,
+				DEAA26CE24F08F59006660CA /* UIColor+ColorHexadecimal.h in Headers */,
 				3CB43B3323FE78F200D50EE0 /* YTYCoreFramework.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +501,7 @@
 				3C481505242B534E00882209 /* MBProgressHUD+MJ.m in Sources */,
 				3CB90FEB242D941B00819C3B /* UITextField+Length.m in Sources */,
 				3CB90FF0242D941B00819C3B /* UILabel+Extension.m in Sources */,
+				DEAA26CD24F08F59006660CA /* UIColor+ColorHexadecimal.m in Sources */,
 				3CB90FE9242D941B00819C3B /* UIImage+Extension.m in Sources */,
 				3CB43B4D23FE7A1000D50EE0 /* YTYBaseNavigationController.m in Sources */,
 				3CC8CB602412557A00EDEE71 /* YTYRequest.m in Sources */,

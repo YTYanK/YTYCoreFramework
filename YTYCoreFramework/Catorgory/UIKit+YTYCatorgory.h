@@ -20,6 +20,7 @@
 #import "NSString+Extension.h"
 #import "UILabel+Extension.h"
 #import "UIView+YTYBorderLine.h"
+#import "UIColor+ColorHexadecimal.h"
 
 #endif /* UIKit_YTYCatorgory_h */
 
