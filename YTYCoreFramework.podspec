@@ -1,12 +1,12 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.1.2"
+  spec.version      = "0.1.3"
   spec.summary      = "重构Core、Catorgory内容，并且完善方法"
   spec.description  = <<-DESC
   构建框架
   1.构建的框架分成两个部分Core、Catorgory
-  2.核心除了YTYTools（工具）、YTYRequest,其余文件直接继承重写方法
+  2.核心除了YTYTools（工具）、YTYRequest（工具）,其余文件直接继承重写方法
   3.Catorgory 是扩展的辅助功能
   4.YTYConfigure.h 文件是宏定义文件，核心通用方法都在里面 
   DESC
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
     ss.public_header_files = "YTYCoreFramework/Catorgory/*.h"
     ss.frameworks = 'Foundation','UIKit'
     ss.dependency "MBProgressHUD", "~>1.2.0"
-    #ss.resource = "YTYCoreFramework/Catorgory/MBProgressHUD.bundle"
+    ss.resource = "YTYCoreFramework/Catorgory/MBProgressHUD.bundle"
   end 
   
 
@@ -53,7 +53,7 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
   #-- 资源 --#
-  spec.resource = "YTYCoreFramework/Catorgory/MBProgressHUD.bundle"
+  #spec.resource = "YTYCoreFramework/Catorgory/MBProgressHUD.bundle"
   #spec.resource = "YTYCoreFramework/back.png'
   #-- 依赖 --#
   spec.dependency "AFNetworking", "~>3.2.1"

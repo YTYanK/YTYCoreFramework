@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 网络请求对象
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
 @property (strong, nonatomic, nonnull) AFHTTPRequestSerializer * rSerializer;
-///  403 - 无权限状态下回调
+///  403 - 无权限状态下回调 -  暂时没有用
 @property (strong, nonatomic) YTYFailureBlock authorityFailBlock;
 
 yty_for_interface(YTYRequest)

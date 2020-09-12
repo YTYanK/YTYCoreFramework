@@ -144,9 +144,10 @@ yty_for_implementation(YTYRequest)
             }else if ([codeStr isEqualToString:@"403"]){
                 // 退出登陆
                 requestStr = @"账户异常，请重新登录!";
-                if ([YTYRequest sharedYTYRequest].authorityFailBlock != nil) {
-                    [YTYRequest sharedYTYRequest].authorityFailBlock(requestStr);
-                }
+                block(jsonDic[@"data"],NetObtainDataStatusFail, requestStr);
+//                if ([YTYRequest sharedYTYRequest].authorityFailBlock != nil) {
+//                    [YTYRequest sharedYTYRequest].authorityFailBlock(requestStr);
+//                }
                 return;
             }else if([codeStr isEqualToString:@"500"]){
                  requestStr = jsonDic[@"msg"];
