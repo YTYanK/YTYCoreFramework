@@ -29,15 +29,15 @@
 //    [YTYTools obtainBackItemWithTarget:self action:@selector(logout) image:[UIImage imageNamed:@"error"]]; imageWithRenderingMode:UIImageRenderingModeAutomatic]];
     self.navigationItem.rightBarButtonItem = [YTYTools obtainBackItemWithTarget:self action:@selector(logout) image:[UIImage imageNamed:@"error"]];
     if (@available(iOS 10.0, *)) {
-      [self.navigationController.navigationBar setBarTintColor:UIColor.blueColor];
+       [self.navigationController.navigationBar setBarTintColor:UIColor.blueColor];
     }else {
-      [self.navigationController.navigationBar setTintColor:UIColor.redColor];
+       [self.navigationController.navigationBar setTintColor:UIColor.redColor];
     }
     
     self.isCustomTable = YES;
     self.baseTableView = [[UITableView alloc] init];
     if (IS_IPHONE_X) {
-      self.baseTableView.frame = CGRectMake(0,  94, SCREEN_WIDTH,  self.view.size.height - 94 -  40 - SCREEN_NAV_BAR);
+      self.baseTableView.frame = CGRectMake(0,  94, SCREEN_WIDTH,  self.view.size.height  - SCREEN_NAV_BAR + 20);
     }else {
       self.baseTableView.frame = CGRectMake(0,  94, SCREEN_WIDTH,  self.view.size.height - 94 -  40 - SCREEN_NAV_BAR);
     }

@@ -7,7 +7,6 @@ target 'YTYCoreFramework' do
    pod 'MJRefresh', '~> 3.1.12'
    pod 'YYCache'     ,'1.0.4'           #缓存
    pod 'YYModel'     ,'1.0.4'           #模型处理
-#   pod 'YTYCoreFramework'
 
    
 end
@@ -19,4 +18,5 @@ target 'YTYCoreFrameworkDome' do
    pod 'MJRefresh', '~> 3.1.12'
    pod 'YYCache'     ,'1.0.4'           #缓存
    pod 'YYModel'     ,'1.0.4'           #模型处理
+   #pod 'FMDB' # 数据存储
 end

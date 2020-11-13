@@ -87,17 +87,20 @@
 }
 
 
-- (void)setTitleFont:(NSFont *)titleFont {
-    if (_titleFont != titleFont) {
-        _titleFont = titleFont;
+- (void)setTitleTextAttributes:(NSDictionary *)titleTextAttributes {
+    if (_titleTextAttributes != titleTextAttributes) {
+        _titleTextAttributes = titleTextAttributes;
+        self.navigationBar.titleTextAttributes = titleTextAttributes;
     }
+    
 }
 
 - (void)setTitleColor:(UIColor *)titleColor {
     if (_titleColor != titleColor) {
            _titleColor = titleColor;
-       }
-    self.navigationBar.tintColor = titleColor;
+        self.navigationBar.tintColor = titleColor;
+    }
+   
 }
 
 

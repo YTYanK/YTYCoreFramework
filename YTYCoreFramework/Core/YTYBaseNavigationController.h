@@ -14,12 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 ///  Navigation Bar 背景颜色   - bar  tint
 @property (strong, nonatomic) UIColor * bgColor;
-///
-@property (strong, nonatomic) NSFont *  titleFont;
 /// 返回 字颜色
 @property (strong, nonatomic) UIColor * titleColor;
 /// 背景图片
 @property (strong, nonatomic) UIImage * bgImage;
+/// 样式
+@property (strong, nonatomic) NSDictionary *titleTextAttributes;
+
 
 /// 设置 标题 样式
 - (void)navBarTitleTextAttributes:(NSDictionary<NSAttributedStringKey, id> *)attributes;
