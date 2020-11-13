@@ -53,8 +53,8 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
   #-- 资源 --#
-  spec.resource = "YTYCoreFramework/Catorgory/*.bundle"
-  spec.resources = "YTYCoreFramework/Catorgory/*.png"
+  #spec.resources = "YTYCoreFramework/Catorgory/*.bundle"
+  #spec.resources = "YTYCoreFramework/Catorgory/*.png"
   #-- 依赖 --#
   spec.dependency "AFNetworking", "~>3.2.1"
   spec.dependency "YYModel", "~>1.0.4"
