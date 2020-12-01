@@ -1,0 +1,6 @@
+framework module Pods_YTYCoreFrameworkDome {
+  umbrella header "Pods-YTYCoreFrameworkDome-umbrella.h"
+
+  export *
+  module * { export * }
+}
