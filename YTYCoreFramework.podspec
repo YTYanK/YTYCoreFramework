@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "YTYCoreFramework"
-  spec.version      = "0.1.4"
+  spec.version      = "0.1.5"
   spec.summary      = "重构Core、Catorgory内容，并且完善方法"
   spec.description  = <<-DESC
   构建框架
@@ -56,9 +56,9 @@ Pod::Spec.new do |spec|
   #spec.resources = "YTYCoreFramework/Catorgory/*.bundle"
   #spec.resources = "YTYCoreFramework/Catorgory/*.png"
   #-- 依赖 --#
-  spec.dependency "AFNetworking", "~>3.2.1"
+  spec.dependency "AFNetworking", "~>4.0.1"
   spec.dependency "YYModel", "~>1.0.4"
   spec.dependency "YYCache", "~>1.0.4"
-  spec.dependency "MJRefresh", "~>3.1.12"
+  spec.dependency "MJRefresh", "~>3.5.0"
 
  end
