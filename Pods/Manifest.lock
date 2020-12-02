@@ -15,14 +15,14 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - MBProgressHUD (1.2.0)
-  - MJRefresh (3.1.17)
+  - MJRefresh (3.5.0)
   - YYCache (1.0.4)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.2.1)
+  - AFNetworking
   - MBProgressHUD (~> 1.2.0)
-  - MJRefresh (~> 3.1.12)
+  - MJRefresh (~> 3.5.0)
   - YYCache (= 1.0.4)
   - YYModel (= 1.0.4)
 
@@ -37,10 +37,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: ce7c236b781e3e6378a09211402640a6f1a56d17
+PODFILE CHECKSUM: 3868d94d2dd9ac1afb452786b6d8aac8be29ff55
 
 COCOAPODS: 1.9.3
