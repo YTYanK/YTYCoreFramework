@@ -28,7 +28,7 @@ yty_for_implementation(YTYRequest)
 
 + (void)requestWithUrl:(NSString *)url requestWithParameters:(NSDictionary *)par method:(NetMethod)met returnSuccess:(void(^)(id objs, int status, NSString *mag))success returnError:(void(^)(NSString *err))err {
     
-    [[AFNetworkReachabilityManager sharedManager]startMonitoring];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager]setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         
         if (status == AFNetworkReachabilityStatusNotReachable  || status == AFNetworkReachabilityStatusUnknown) {
@@ -85,6 +85,35 @@ yty_for_implementation(YTYRequest)
     
     
 }
+
+
+// 后面添加
++ (void)requestWithUrl:(NSString *)url authToken:(NSString *)token parameters:(NSDictionary *)dic method:(NetMethod)met returnSuccess:(void (^)(id _Nonnull objs, int state, NSString * _Nonnull msg))successBlock returnError:(void (^)(NSString * _Nonnull err))errBlock {
+    
+    
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+                NSLog(@"未知网络");
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@"没有网络");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                NSLog(@"蜂窝网络");
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                NSLog(@"WiFi网络");
+                break;
+            default:
+                break;
+        }
+    }];
+    [manager startMonitoring]; //开始监听
+    
+}
+
 
 
 /**
