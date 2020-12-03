@@ -22,9 +22,9 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - MBProgressHUD (~> 1.2.0)
-  - MJRefresh (~> 3.5.0)
-  - YYCache (= 1.0.4)
-  - YYModel (= 1.0.4)
+  - MJRefresh
+  - YYCache
+  - YYModel
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -41,6 +41,6 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 3868d94d2dd9ac1afb452786b6d8aac8be29ff55
+PODFILE CHECKSUM: 89b289f5e6d7944ebf817b266bf90e47bd396a04
 
 COCOAPODS: 1.9.3

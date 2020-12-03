@@ -58,13 +58,15 @@ yty_for_implementation(YTYRequest)
             NSComparisonResult getComparison = [metStr caseInsensitiveCompare:@"GET"];
             if (getComparison == NSOrderedSame) {
                 //requestUrl.URL.absoluteString
-                [manager GET:[NSString stringWithFormat:@"%@",requestUrl] parameters:par progress:^(NSProgress * _Nonnull downloadProgress) {
+                /*[manager GET:[NSString stringWithFormat:@"%@",requestUrl] parameters:par progress:^(NSProgress * _Nonnull downloadProgress) {
                     //不做操作
                 } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                     [YTYRequest requestWithRetrunSuccess:responseObject successBlock:success];
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                     [YTYRequest requestWithReturnError:error errorBlock:err];
-                }];
+                }];*/
+//                [manager GET]
+                
                 
             }
             
@@ -88,7 +90,7 @@ yty_for_implementation(YTYRequest)
 
 
 // 后面添加
-+ (void)requestWithUrl:(NSString *)url authToken:(NSString *)token parameters:(NSDictionary *)dic method:(NetMethod)met returnSuccess:(void (^)(id _Nonnull objs, int state, NSString * _Nonnull msg))successBlock returnError:(void (^)(NSString * _Nonnull err))errBlock {
+/*+ (void)requestWithUrl:(NSString *)url authToken:(NSString *)token parameters:(NSDictionary *)dic method:(NetMethod)met returnSuccess:(void (^)(id _Nonnull objs, int state, NSString * _Nonnull msg))successBlock returnError:(void (^)(NSString * _Nonnull err))errBlock {
     
     
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
@@ -112,7 +114,7 @@ yty_for_implementation(YTYRequest)
     }];
     [manager startMonitoring]; //开始监听
     
-}
+}*/
 
 
 
