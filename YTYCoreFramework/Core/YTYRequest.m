@@ -25,7 +25,7 @@ yty_for_implementation(YTYRequest)
     return [AFHTTPResponseSerializer serializer];
 }
 
-
+/*
 + (void)requestWithUrl:(NSString *)url requestWithParameters:(NSDictionary *)par method:(NetMethod)met returnSuccess:(void(^)(id objs, int status, NSString *mag))success returnError:(void(^)(NSString *err))err {
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
@@ -58,16 +58,13 @@ yty_for_implementation(YTYRequest)
             NSComparisonResult getComparison = [metStr caseInsensitiveCompare:@"GET"];
             if (getComparison == NSOrderedSame) {
                 //requestUrl.URL.absoluteString
-                /*[manager GET:[NSString stringWithFormat:@"%@",requestUrl] parameters:par progress:^(NSProgress * _Nonnull downloadProgress) {
+                [manager GET:[NSString stringWithFormat:@"%@",requestUrl] parameters:par progress:^(NSProgress * _Nonnull downloadProgress) {
                     //不做操作
                 } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                     [YTYRequest requestWithRetrunSuccess:responseObject successBlock:success];
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
                     [YTYRequest requestWithReturnError:error errorBlock:err];
-                }];*/
-//                [manager GET]
-                
-                
+                }];
             }
             
             
@@ -83,45 +80,83 @@ yty_for_implementation(YTYRequest)
             }
         }
     }];
+} */
+
+
++ (void)requestWithUrl:(NSString *)url authToken:(nullable NSDictionary<NSString *,NSString *> *)token parameters:(NSDictionary *)dic method:(NetMethod)met returnSuccess:(void (^)(id _Nonnull objs, int state, NSString * _Nonnull msg))successBlock returnError:(void (^)(NSString * _Nonnull err))errBlock {
     
-    
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+        if (status == AFNetworkReachabilityStatusNotReachable  || status == AFNetworkReachabilityStatusUnknown) {
+            // 網絡不可用
+            // NSString *requestStr = @"";
+             [UIApplication sharedApplication].networkActivityIndicatorVisible  = NO;
+            errBlock(@"网络不可用，请您检查网络");
+        }else{
+            NSString *metStr = (met > 0) ? @"POST" : @"GET";
+            NSString *requestUrl = @"";
+            if ([IPHEAD length] > 0) {
+                requestUrl = [NSString stringWithFormat:@"%@%@", IPHEAD, url];
+            }else {
+                requestUrl = [NSString stringWithFormat:@"%@", url];
+            }
+           
+            
+            // AF 管理者
+            AFHTTPSessionManager *manager = [YTYRequest sharedYTYRequest].sessionManager;
+            
+            if (![YTYRequest beforeExecute:manager]) {
+                errBlock(@"网络不可用，请您检查网络");
+                return;
+            }
+            
+//            manager.responseSerializer = [AFHTTPResponseSerializer serializer];//[YSBNetRequest sharedYSBNetRequest].rSerializer;
+//            [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+//             manager.requestSerializer.timeoutInterval = 8.f;
+//            [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+//
+            NSURLSessionDataTask *task = nil;
+            
+            NSComparisonResult getComparison = [metStr caseInsensitiveCompare:@"GET"];
+            if (getComparison == NSOrderedSame) {
+                NSLog(@"???===>%@",requestUrl);
+                task  = [manager GET:[NSString stringWithFormat:@"%@",requestUrl] parameters:dic headers:token progress:^(NSProgress * _Nonnull downloadProgress) {
+                    //不做操作
+                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                    [YTYRequest requestWithRetrunSuccess:responseObject successBlock:successBlock];
+                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                    [YTYRequest requestWithReturnError:error errorBlock:errBlock];
+                }];
+            
+               [task resume];
+            }
+            
+            
+            NSComparisonResult postComparison = [metStr caseInsensitiveCompare:@"POST"];
+            if (postComparison == NSOrderedSame) {
+                [manager POST:[NSString stringWithFormat:@"%@",requestUrl] parameters:dic headers:token progress:^(NSProgress * _Nonnull uploadProgress) {
+                    //不做操作
+                } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                    [YTYRequest requestWithRetrunSuccess:responseObject successBlock:successBlock];
+                } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                    [YTYRequest requestWithReturnError:error errorBlock:errBlock];
+                }];
+            }
+        };
+        
+        
+    }];
+    [manager startMonitoring]; //开始监听
     
 }
 
 
-// 后面添加
-/*+ (void)requestWithUrl:(NSString *)url authToken:(NSString *)token parameters:(NSDictionary *)dic method:(NetMethod)met returnSuccess:(void (^)(id _Nonnull objs, int state, NSString * _Nonnull msg))successBlock returnError:(void (^)(NSString * _Nonnull err))errBlock {
-    
-    
-    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
-    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-        switch (status) {
-            case AFNetworkReachabilityStatusUnknown:
-                NSLog(@"未知网络");
-                break;
-            case AFNetworkReachabilityStatusNotReachable:
-                NSLog(@"没有网络");
-                break;
-            case AFNetworkReachabilityStatusReachableViaWWAN:
-                NSLog(@"蜂窝网络");
-                break;
-            case AFNetworkReachabilityStatusReachableViaWiFi:
-                NSLog(@"WiFi网络");
-                break;
-            default:
-                break;
-        }
-    }];
-    [manager startMonitoring]; //开始监听
-    
-}*/
-
-
 
 /**
- *  请求成功
+ *  请求成功 -
  */
-+ (void)requestWithRetrunSuccess:(id _Nonnull)responseObject successBlock:(void(^)(id,int,NSString *))block{
+/*+ (void)requestWithRetrunSuccess:(id _Nonnull)responseObject successBlock:(void(^)(id,int,NSString *))block{
     // 请求返回的信息
     __block NSString *requestStr = @"";
     NSError *jsonError = nil;
@@ -192,7 +227,52 @@ yty_for_implementation(YTYRequest)
         requestStr = @"获取不到任何数据";
         block(nil,NetObtainDataStatusError,requestStr); //直接错误
     }
+}*/
+
++ (void)requestWithRetrunSuccess:(id _Nonnull)responseObject successBlock:(void(^)(id,int,NSString *))block{
+    // 请求返回的信息
+    __block NSString *requestStr = @"";
+    NSError *jsonError = nil;
+    NSData *jsonData = nil;
+    // 转成Json字符串
+    
+    if (responseObject == nil) {
+        requestStr = @"jsonStr null / 数据返回有问题， 请查看数据";
+        block(nil,NetObtainDataStatusError, requestStr);  //遇到错误
+        
+    }else if (responseObject == [NSNull null]) {
+        if ([responseObject isEqual:nil]) {
+            requestStr = @"jsonStr null / 数据返回有问题， 请查看数据";
+            block(nil,NetObtainDataStatusError, requestStr);  //遇到错误
+        }
+        
+    }
+    
+    if ([responseObject isKindOfClass:[NSDictionary class]]) {
+        NSLog(@"获取json字符串：原型---->%@",responseObject);  //
+        block(responseObject, NetObtainDataStatusSuccess, requestStr);
+        
+    }else {
+        NSLog(@"不是字典");
+        /// 如果是字符串
+        if([responseObject isKindOfClass:[NSString class]]){
+            // 转 json 字典
+          //  NSLog(@"？？？？？？？==》%@",responseObject);
+            
+           jsonData = [responseObject dataUsingEncoding:NSUTF8StringEncoding];
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&jsonError];
+            block(dic, NetObtainDataStatusSuccess, requestStr);
+        }else { // 不是
+            NSError *parseErr = nil;
+            jsonData = [NSJSONSerialization dataWithJSONObject:responseObject options:NSJSONWritingPrettyPrinted error:&parseErr];
+             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            block(jsonString, NetObtainDataStatusFail, requestStr);
+        }
+    }
 }
+
+
+
 /**
  *  请求失败
  */

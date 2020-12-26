@@ -46,8 +46,8 @@ yty_for_interface(YTYRequest)
  *
  *  none
  */
-+ (void)requestWithUrl:(NSString *)url requestWithParameters:(NSDictionary *)par method:(NetMethod)met returnSuccess:(void(^)(id objs, int status, NSString *mag))success returnError:(void(^)(NSString *err))err;
-
+//+ (void)requestWithUrl:(NSString *)url requestWithParameters:(NSDictionary *)par method:(NetMethod)met returnSuccess:(void(^)(id objs, int status, NSString *mag))success returnError:(void(^)(NSString *err))err;
++ (void)requestWithUrl:(NSString *)url authToken:(nullable NSDictionary<NSString *,NSString *> *)token parameters:(NSDictionary *)dic method:(NetMethod)met returnSuccess:(void(^)(id objs, int status, NSString *mag))success returnError:(void(^)(NSString *err))err;
 
 @end
 

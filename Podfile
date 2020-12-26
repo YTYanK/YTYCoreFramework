@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 target 'YTYCoreFramework' do
    use_frameworks!
-   pod 'AFNetworking'  #, '~> 3.2.1'
+   pod 'AFNetworking', '~> 4.0.1'
    pod 'MBProgressHUD', '~>1.2.0'
    pod 'MJRefresh'    #, '~> 3.5.0'
    pod 'YYCache'    # ,'1.0.4'           #缓存
@@ -13,7 +13,7 @@ end
 
 target 'YTYCoreFrameworkDome' do
    use_frameworks!
-   pod 'AFNetworking'#, '~> 3.2.1'
+   pod 'AFNetworking', '~> 4.0.1'
    pod 'MBProgressHUD', '~>1.2.0'
    pod 'MJRefresh'    #, '~> 3.5.0'
    pod 'YYCache'    # ,'1.0.4'           #缓存

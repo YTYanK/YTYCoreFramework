@@ -112,18 +112,26 @@
 //    [dic setObject:isLogin forKey:@"session_token"];
     
     NSMutableDictionary * dic =[NSMutableDictionary dictionary];
-          [dic setObject:@"" forKey:@"t"];
-          [dic setObject:@"" forKey:@"keyword"];
-        [dic setObject:@(0) forKey:@"offset"];
-    
-    [YTYRequest requestWithUrl:@"http://61.244.70.193:9101/keicheung/list/product" requestWithParameters:dic method:NetMethodGET returnSuccess:^(id  _Nonnull objs, int status, NSString * _Nonnull mag) {
+//          [dic setObject:@"" forKey:@"t"];
+//          [dic setObject:@"" forKey:@"keyword"];
+//        [dic setObject:@(0) forKey:@"offset"];
+    [NSUD setValue:@"http://61.244.70.193:9101" forKey:@"IPHEAD"];
+    [YTYRequest requestWithUrl:@"/keicheung/list/product" authToken:nil parameters:dic method:NetMethodGET returnSuccess:^(id  _Nonnull objs, int status, NSString * _Nonnull mag) {
         NSLog(@"?????===>%@",objs);
     } returnError:^(NSString * _Nonnull err) {
         NSLog(@"?????===>%@",err);
+        [self.baseTableView.mj_header endRefreshing];
     }];
+//    [YTYRequest requestWithUrl:@"http://61.244.70.193:9101/keicheung/list/product" requestWithParameters:dic method:NetMethodGET returnSuccess:^(id  _Nonnull objs, int status, NSString * _Nonnull mag) {
+//        NSLog(@"?????===>%@",objs);
+//
+//
+//    } returnError:^(NSString * _Nonnull err) {
+//        NSLog(@"?????===>%@",err);
+//    }];
     
-    [self.baseTableView.mj_header endRefreshing];
-    [self.baseTableView reloadData];
+//    [self.baseTableView.mj_header endRefreshing];
+//    [self.baseTableView reloadData];
 }
 
 // 加载
